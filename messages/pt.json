@@ -1,0 +1,412 @@
+{
+  "meta": {
+    "title": "Tânia Oliveira | Portefólio de Engenharia de Software",
+    "description": "Portefólio multilingue de Tânia Oliveira, focado em engenharia de software, aplicações web, plataformas SaaS, APIs, integrações empresariais e projetos orientados a produção.",
+    "keywords": [
+      "Tânia Oliveira",
+      "engenharia de software",
+      "desenvolvimento web",
+      "frontend",
+      "backend",
+      "React",
+      "SaaS",
+      "APIs REST",
+      "ERP",
+      "CRM"
+    ]
+  },
+  "site": {
+    "navigation": {
+      "brand": "Tânia Oliveira",
+      "initials": "TO",
+      "role": "Software Engineering / Web Applications",
+      "aria": "Navegação principal",
+      "homeAria": "Ir para a página inicial",
+      "skip": "Saltar para o conteúdo",
+      "languageLabel": "Selecionar idioma",
+      "openMenu": "Abrir menu",
+      "closeMenu": "Fechar menu",
+      "items": [
+        {
+          "label": "Início",
+          "href": "/home"
+        },
+        {
+          "label": "Sobre",
+          "href": "/under-construction"
+        },
+        {
+          "label": "Conquistas",
+          "href": "/under-construction"
+        },
+        {
+          "label": "Projetos",
+          "href": "/under-construction"
+        },
+        {
+          "label": "Contacto",
+          "href": "/under-construction"
+        }
+      ],
+      "languages": [
+        {
+          "code": "pt",
+          "label": "PT"
+        },
+        {
+          "code": "en",
+          "label": "EN"
+        },
+        {
+          "code": "es",
+          "label": "ES"
+        }
+      ]
+    },
+    "cv": {
+      "label": "Descarregar CV",
+      "href": "/TODO_CV_FILE.pdf"
+    },
+    "hero": {
+      "eyebrow": "Tânia Oliveira / Portefólio de Engenharia de Software",
+      "title": {
+        "first": "SOFTWARE",
+        "highlight": "ENGINEER"
+      },
+      "description": "Engenharia de software aplicada a produtos web, integrações empresariais e sistemas orientados a produção.",
+      "portraitAlt": "Retrato a preto e branco de Tânia Oliveira",
+      "typewriter": [
+        "Engenharia de Software",
+        "Desenvolvimento Frontend e Backend",
+        "Aplicações Web Empresariais",
+        "Plataformas SaaS",
+        "Integrações com APIs",
+        "Sistemas Empresariais"
+      ],
+      "microLabels": [
+        "ENGENHARIA DE SOFTWARE",
+        "FRONTEND E BACKEND",
+        "APIs • SAAS • SISTEMAS EMPRESARIAIS"
+      ],
+      "cta": {
+        "projects": "Ver projetos",
+        "contact": "Contacto"
+      }
+    },
+    "underConstruction": {
+      "badge": "Primeiro lançamento",
+      "prompt": "portfolio.monthly.release()",
+      "title": "Página em construção",
+      "subtitle": "Estou a lançar este portfolio por etapas.",
+      "text": "A Home já está disponível e, a partir daqui, vou publicar uma nova página por mês, com mais detalhe sobre o meu percurso, conquistas, projetos e formas de contacto.",
+      "nextLabel": "Próxima página",
+      "nextPage": "Sobre mim",
+      "button": "Voltar à Home"
+    },
+    "educationRunner": {
+      "eyebrow": "FORMAÇÃO",
+      "title": "Percurso em movimento",
+      "description": "Salta os obstáculos e desbloqueia as formações que fazem parte do meu percurso.",
+      "trackLabel": "Educação e cursos",
+      "progressLabel": "Em evolução",
+      "instructionLabel": "Clique para saltar",
+      "unlockedLabel": "Curso desbloqueado",
+      "actionLabel": "Saltar obstáculo e desbloquear o próximo curso",
+      "completeLabel": "Percurso desbloqueado",
+      "nextGoal": {
+        "eyebrow": "Não acaba aqui",
+        "title": "Próximos objetivos",
+        "primary": "CSSLP — Secure Software Lifecycle",
+        "secondary": "Azure Fundamentals — AZ-900"
+      },
+      "items": [
+        {
+          "title": "Fullstack Developer Bootcamp",
+          "status": "Concluído"
+        },
+        {
+          "title": "Transformação Digital",
+          "status": "Concluído"
+        },
+        {
+          "title": "Java Bootcamp",
+          "status": "Concluído"
+        },
+        {
+          "title": "Frontend e Programação Orientada a Objetos",
+          "status": "Concluído"
+        },
+        {
+          "title": "React Developer",
+          "status": "Concluído"
+        },
+        {
+          "title": "Fundamentos de Product Owner",
+          "status": "Concluído"
+        },
+        {
+          "title": "Programação em Python",
+          "status": "Concluído"
+        },
+        {
+          "title": "Programação Web com PHP",
+          "status": "Concluído"
+        },
+        {
+          "title": "CET Redes e Sistemas Informáticos — Nível 5",
+          "status": "Concluído"
+        },
+        {
+          "title": "Engenharia de Software",
+          "status": "Em curso"
+        }
+      ]
+    },
+    "about": {
+      "eyebrow": "Sobre Mim",
+      "title": "Perfil junior em engenharia de software, desenvolvimento web e integrações.",
+      "description": "Finalista em Engenharia de Software com foco em aplicações web, backend, APIs, dados e práticas de desenvolvimento seguro.",
+      "statement": "Sou a Tânia Oliveira, finalista em Engenharia de Software e developer junior com experiência prática na criação de aplicações web, interfaces responsivas, integrações com APIs, preparação de dados e soluções ligadas a sistemas empresariais. Tenho interesse especial por desenvolvimento web, programação assistida por IA, backend, integração de APIs e práticas de desenvolvimento seguro, sempre com foco em estrutura, usabilidade e qualidade técnica.",
+      "principles": [
+        {
+          "title": "Engenharia",
+          "text": "Base académica em Engenharia de Software, aplicada à análise, implementação, integração e evolução de sistemas."
+        },
+        {
+          "title": "Web",
+          "text": "Experiência prática em interfaces, aplicações web, PWAs, dashboards, websites empresariais e arquiteturas frontend modernas."
+        },
+        {
+          "title": "Integração",
+          "text": "Interesse e prática em APIs, bases de dados, integrações ERP/CRM, validações, rastreabilidade e fluxos orientados a produção."
+        }
+      ]
+    },
+    "projects": {
+      "eyebrow": "Projetos",
+      "title": "Projetos e Sistemas",
+      "description": "Uma seleção anonimizada de soluções que desenvolvi, integrando frontend, backend, dados, APIs, automação e sistemas empresariais.",
+      "ariaLabel": "Showcase de projetos selecionados",
+      "cardAriaLabel": "Ver detalhes do projeto {title}",
+      "contributionLabel": "Implementado",
+      "detailsLabel": "Ver detalhes",
+      "previousLabel": "Projeto anterior",
+      "nextLabel": "Projeto seguinte",
+      "progressLabel": "Selecionar projeto"
+    },
+    "projectDetail": {
+      "back": "Voltar aos projetos",
+      "overview": "Visão geral",
+      "technicalStack": "Stack técnica",
+      "objective": "Objetivo",
+      "contribution": "Contribuição",
+      "implementationSummary": "Resumo de implementação",
+      "notFoundEyebrow": "Detalhe de projeto",
+      "notFoundTitle": "Projeto não encontrado",
+      "notFoundDescription": "Este projeto não foi encontrado. Volte ao showcase de projetos e escolha outro projeto."
+    },
+    "skills": {
+      "eyebrow": "Competências",
+      "title": "Stack técnica para desenvolvimento web, integrações, dados e sistemas de negócio.",
+      "description": "Competências organizadas por área, com foco em implementação, manutenção e entrega de software em contexto real.",
+      "groups": [
+        {
+          "key": "frontend",
+          "title": "Frontend",
+          "items": [
+            "HTML",
+            "CSS",
+            "Sass",
+            "Bootstrap",
+            "JavaScript",
+            "React",
+            "Angular"
+          ]
+        },
+        {
+          "key": "backend",
+          "title": "Backend",
+          "items": [
+            "NodeJS",
+            "Python",
+            "PHP",
+            "Laravel",
+            "REST APIs"
+          ]
+        },
+        {
+          "key": "integrations",
+          "title": "APIs",
+          "items": [
+            "REST APIs",
+            "Integração frontend/backend",
+            "Validação de dados",
+            "Serviços externos"
+          ]
+        },
+        {
+          "key": "databases",
+          "title": "Bases de dados",
+          "items": [
+            "MySQL",
+            "SQLite",
+            "Modelação relacional",
+            "Persistência de dados"
+          ]
+        },
+        {
+          "key": "tools",
+          "title": "Workflow",
+          "items": [
+            "Kanban",
+            "DevOps",
+            "GitHub",
+            "Bitbucket",
+            "Trabalho colaborativo"
+          ]
+        }
+      ]
+    },
+    "experience": {
+      "eyebrow": "Experiência / CV",
+      "title": "Percurso técnico com experiência em frontend, full-stack, sistemas empresariais e formação em Engenharia de Software.",
+      "description": "Experiência profissional e académica orientada a aplicações web, integrações, bases de dados e software de produção.",
+      "items": [
+        {
+          "period": "Março 2024",
+          "role": "Fullstack Developer",
+          "company": "Plataforma web privada",
+          "type": "Full-stack",
+          "description": "Desenvolvimento full-stack em plataforma web, colaborando na implementação de funcionalidades e integração entre lógica de frontend e backend."
+        },
+        {
+          "period": "Março 2021 - Setembro 2021",
+          "role": "FrontEnd Developer",
+          "company": "Empresa privada de seguros",
+          "type": "Frontend",
+          "description": "Desenvolvimento frontend para uma empresa de seguros, com foco em interfaces web, estrutura visual e experiência digital."
+        }
+      ],
+      "educationTitle": "Educação",
+      "educationItems": [
+        {
+          "period": "2023 - 2025",
+          "title": "Licenciatura em Engenharia de Software",
+          "institution": "B.Sc. Software Engineering"
+        },
+        {
+          "period": "2024",
+          "title": "CET Redes e Sistemas Informáticos",
+          "institution": "IEFP"
+        }
+      ],
+      "languagesTitle": "Idiomas",
+      "languagesItems": [
+        {
+          "language": "Português",
+          "level": "Nativo"
+        },
+        {
+          "language": "Inglês",
+          "level": "B2"
+        },
+        {
+          "language": "Francês",
+          "level": "B1"
+        }
+      ]
+    },
+    "coverLetter": {
+      "eyebrow": "Carta de apresentação",
+      "title": "Uma apresentação técnica para equipas e projetos de software.",
+      "description": "Texto base alinhado com experiência prática em desenvolvimento web, integrações, dados e sistemas empresariais.",
+      "paragraphs": [
+        "Sou a Tânia Oliveira, estudante finalista de Engenharia de Software com experiência em desenvolvimento frontend, backend, aplicações web, plataformas SaaS, APIs e integrações empresariais.",
+        "Tenho participado em projetos como websites corporativos, plataformas operacionais, conectores ERP/CRM, sincronização com marketplaces e preparação de dados para importação CRM, sempre com atenção à confidencialidade do contexto de negócio.",
+        "A minha abordagem é técnica, organizada e orientada a produção: código estruturado, validação de dados, logs, colaboração com GitHub/Bitbucket e atenção à manutenção futura."
+      ]
+    },
+    "contact": {
+      "eyebrow": "Contacto",
+      "title": "Contacto",
+      "description": "Para oportunidades profissionais, colaboração técnica ou projetos de software, pode contactar-me diretamente através dos canais abaixo.",
+      "email": "taniaelizaoliveira@gmail.com"
+    },
+    "social": {
+      "github": "https://github.com/TaniaElizaOliveira",
+      "linkedin": "https://www.linkedin.com/in/oliveira-tania/",
+      "links": [
+        {
+          "label": "GitHub",
+          "href": "https://github.com/TaniaElizaOliveira"
+        },
+        {
+          "label": "LinkedIn",
+          "href": "https://www.linkedin.com/in/oliveira-tania/"
+        }
+      ]
+    },
+    "footer": {
+      "brand": "Tânia Oliveira",
+      "description": "Portefólio de engenharia de software, aplicações web, SaaS, APIs e integrações empresariais.",
+      "prompt": "portfolio.status()",
+      "role": "Finalista em Engenharia de Software",
+      "location": "Portugal",
+      "focus": "Frontend · .NET · Aplicações Web · Integrações ERP",
+      "mindset": "Sempre a aprender, construir e melhorar",
+      "availability": "Aberta a oportunidades",
+      "linksLabel": "Navegação",
+      "socialLabel": "Perfis",
+      "builtLine": "Desenvolvido com foco em engenharia, clareza e sistemas orientados a produção.",
+      "links": [
+        {
+          "label": "Sobre",
+          "href": "/under-construction"
+        },
+        {
+          "label": "Projetos",
+          "href": "/under-construction"
+        },
+        {
+          "label": "Conquistas",
+          "href": "/under-construction"
+        },
+        {
+          "label": "Contacto",
+          "href": "/under-construction"
+        }
+      ],
+      "languageLabel": "Selecionar idioma",
+      "languages": [
+        {
+          "code": "pt",
+          "label": "PT"
+        },
+        {
+          "code": "en",
+          "label": "EN"
+        },
+        {
+          "code": "es",
+          "label": "ES"
+        }
+      ],
+      "copyright": "© 2026 Tânia Oliveira. Todos os direitos reservados."
+    },
+    "achievements": {
+      "eyebrow": "Conquistas",
+      "title": "Conquistas",
+      "description": "Marcos importantes da minha evolução técnica, experiência em projetos e crescimento como developer.",
+      "items": [
+        "Finalista em Engenharia de Software",
+        "Desenvolvimento de aplicações web responsivas",
+        "Experiência prática com frontend e backend",
+        "Integrações com APIs e sistemas empresariais",
+        "Preparação, limpeza e validação de dados para CRM",
+        "Experiência com soluções SaaS e arquiteturas multi-tenant",
+        "Trabalho com ERP, CRM, marketplaces e bases de dados"
+      ],
+      "placeholder": "Área reservada para uma futura experiência interativa com terminal técnico."
+    }
+  }
+}

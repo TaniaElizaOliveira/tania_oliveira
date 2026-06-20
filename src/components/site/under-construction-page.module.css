@@ -1,0 +1,200 @@
+.page {
+  position: relative;
+  display: grid;
+  min-height: 100svh;
+  place-items: center;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 50% 30%, rgba(255, 0, 204, 0.12), transparent 22rem),
+    radial-gradient(circle at 80% 72%, rgba(123, 92, 255, 0.09), transparent 24rem),
+    linear-gradient(180deg, #050507 0%, #0a0a0f 100%);
+  color: var(--text);
+  padding: clamp(1.2rem, 4vw, 2.5rem);
+}
+
+.page::before {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.045) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.035) 1px, transparent 1px);
+  background-size: 76px 76px;
+  content: "";
+  mask-image: radial-gradient(circle at 50% 42%, black, transparent 68%);
+  opacity: 0.26;
+}
+
+.page::after {
+  position: absolute;
+  inset: 0;
+  background:
+    repeating-linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0.026) 0,
+      rgba(255, 255, 255, 0.026) 1px,
+      transparent 1px,
+      transparent 6px
+    );
+  content: "";
+  opacity: 0.24;
+  pointer-events: none;
+}
+
+.card {
+  position: relative;
+  z-index: 1;
+  width: min(100%, 48rem);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 1.35rem;
+  background:
+    radial-gradient(circle at 18% 0%, rgba(255, 0, 204, 0.16), transparent 16rem),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.07), rgba(255, 255, 255, 0.018)),
+    rgba(8, 8, 13, 0.82);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.08),
+    0 24px 64px rgba(0, 0, 0, 0.42),
+    0 0 34px rgba(255, 0, 204, 0.08);
+  padding: clamp(1.35rem, 5vw, 3rem);
+  text-align: center;
+  backdrop-filter: blur(10px);
+}
+
+.statusBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  border: 1px solid rgba(255, 0, 204, 0.38);
+  border-radius: 999px;
+  background: rgba(255, 0, 204, 0.08);
+  color: var(--primary-soft);
+  font-family: var(--font-mono), ui-monospace, SFMono-Regular, Consolas, monospace;
+  font-size: 0.72rem;
+  font-weight: 900;
+  letter-spacing: 0.16em;
+  padding: 0.5rem 0.78rem;
+  text-transform: uppercase;
+}
+
+.statusBadge span {
+  width: 0.48rem;
+  height: 0.48rem;
+  border-radius: 999px;
+  background: var(--primary);
+  box-shadow: 0 0 18px rgba(255, 0, 204, 0.72);
+}
+
+.prompt {
+  margin: clamp(1.7rem, 4vw, 2.35rem) 0 0;
+  color: rgba(234, 234, 240, 0.58);
+  font-family: var(--font-mono), ui-monospace, SFMono-Regular, Consolas, monospace;
+  font-size: clamp(0.8rem, 2vw, 0.95rem);
+}
+
+.title {
+  margin: 0.55rem 0 0;
+  color: var(--text);
+  font-family: var(--font-display), Impact, ui-sans-serif, system-ui, sans-serif;
+  font-size: clamp(3.6rem, 12vw, 7rem);
+  line-height: 0.9;
+  text-transform: uppercase;
+}
+
+.subtitle {
+  margin: 1.15rem auto 0;
+  max-width: 34rem;
+  color: var(--primary-soft);
+  font-size: clamp(1.05rem, 2vw, 1.25rem);
+  font-weight: 800;
+}
+
+.text {
+  margin: 0.8rem auto 0;
+  max-width: 38rem;
+  color: var(--text-muted);
+  font-size: clamp(1rem, 2vw, 1.1rem);
+  line-height: 1.75;
+}
+
+.nextPageCard {
+  display: grid;
+  width: min(100%, 21rem);
+  margin: clamp(1.15rem, 3vw, 1.6rem) auto 0;
+  border: 1px solid rgba(255, 0, 204, 0.32);
+  border-radius: 0.95rem;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.07), rgba(255, 255, 255, 0.018)),
+    rgba(255, 0, 204, 0.055);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.06),
+    0 12px 34px rgba(0, 0, 0, 0.28);
+  gap: 0.22rem;
+  padding: 0.85rem 1rem;
+}
+
+.nextPageCard span {
+  color: rgba(234, 234, 240, 0.58);
+  font-family: var(--font-mono), ui-monospace, SFMono-Regular, Consolas, monospace;
+  font-size: 0.68rem;
+  font-weight: 900;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.nextPageCard strong {
+  color: var(--primary-soft);
+  font-size: clamp(1rem, 2vw, 1.16rem);
+  font-weight: 900;
+}
+
+.homeLink {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 3.15rem;
+  margin-top: clamp(1.6rem, 4vw, 2.25rem);
+  border: 1px solid rgba(255, 0, 204, 0.56);
+  border-radius: 0.7rem;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.02)),
+    rgba(83, 0, 68, 0.72);
+  box-shadow:
+    0 0.34rem 0 rgba(74, 0, 64, 0.75),
+    0 0 30px rgba(255, 0, 204, 0.18);
+  color: var(--text);
+  font-size: 1rem;
+  font-weight: 900;
+  padding: 0.88rem 1.1rem;
+  text-decoration: none;
+  transition:
+    box-shadow 180ms ease,
+    transform 180ms ease,
+    border-color 180ms ease;
+}
+
+.homeLink:hover,
+.homeLink:focus-visible {
+  border-color: rgba(255, 0, 204, 0.86);
+  box-shadow:
+    0 0.4rem 0 rgba(74, 0, 64, 0.82),
+    0 0 34px rgba(255, 0, 204, 0.26);
+  transform: translateY(-0.08rem);
+}
+
+.homeLink:active {
+  box-shadow:
+    0 0.12rem 0 rgba(74, 0, 64, 0.82),
+    0 0 22px rgba(255, 0, 204, 0.18);
+  transform: translateY(0.16rem);
+}
+
+.homeLink:focus-visible {
+  outline: 2px solid rgba(255, 0, 204, 0.5);
+  outline-offset: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .homeLink {
+    transition: none;
+  }
+}

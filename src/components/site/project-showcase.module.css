@@ -1,0 +1,822 @@
+.showcase {
+  --active-shift: 0;
+  --progress: 0.1428;
+  --pointer-x: 50%;
+  --pointer-y: 48%;
+  --pointer-tilt-x: 0deg;
+  --pointer-tilt-y: 0deg;
+  --scroll-depth: 0px;
+  position: relative;
+  min-height: clamp(46rem, 74vw, 58rem);
+  overflow: hidden;
+  border: 1px solid rgba(234, 234, 240, 0.12);
+  border-radius: 8px;
+  background:
+    radial-gradient(circle at 50% 0%, rgba(255, 0, 204, 0.18), transparent 36rem),
+    radial-gradient(circle at 10% 76%, rgba(122, 122, 255, 0.12), transparent 26rem),
+    linear-gradient(180deg, rgba(17, 17, 24, 0.9), rgba(10, 10, 15, 0.98));
+  box-shadow:
+    0 40px 120px rgba(0, 0, 0, 0.44),
+    inset 0 1px 0 rgba(255, 255, 255, 0.08);
+  isolation: isolate;
+  padding: clamp(1rem, 3vw, 2rem);
+}
+
+.backgroundLayers {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.atmosphere,
+.spotlight,
+.deepGrid,
+.dataLines,
+.orbPrimary,
+.orbSecondary,
+.geometryOne,
+.geometryTwo,
+.scanline,
+.particleField {
+  position: absolute;
+  pointer-events: none;
+  will-change: transform, opacity;
+}
+
+.atmosphere {
+  inset: -22% -16%;
+  background:
+    radial-gradient(circle at calc(28% + (var(--active-shift) * 4%)) 22%, rgba(255, 0, 204, 0.22), transparent 22rem),
+    radial-gradient(circle at calc(72% - (var(--active-shift) * 3%)) 46%, rgba(122, 122, 255, 0.17), transparent 28rem),
+    radial-gradient(circle at 50% 92%, rgba(234, 234, 240, 0.08), transparent 34rem);
+  filter: blur(8px);
+  opacity: 0.96;
+  transform: translate3d(0, calc(var(--scroll-depth) * -0.35), 0);
+  animation: atmospherePulse 8s ease-in-out infinite;
+}
+
+.spotlight {
+  inset: 0;
+  background: radial-gradient(circle at var(--pointer-x) var(--pointer-y), rgba(255, 0, 204, 0.16), transparent 22rem);
+  mix-blend-mode: screen;
+  opacity: 0.94;
+}
+
+.deepGrid {
+  inset: -20%;
+  background:
+    linear-gradient(rgba(255, 255, 255, 0.065) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.045) 1px, transparent 1px);
+  background-size: 76px 76px;
+  opacity: 0.3;
+  transform:
+    translate3d(0, calc(var(--scroll-depth) * 0.62), 0)
+    perspective(900px)
+    rotateX(58deg)
+    translateY(-18%);
+  transform-origin: center bottom;
+}
+
+.dataLines {
+  inset: 12% -10%;
+  background:
+    repeating-linear-gradient(
+      115deg,
+      transparent 0,
+      transparent 44px,
+      rgba(255, 0, 204, 0.08) 45px,
+      transparent 47px
+    ),
+    repeating-linear-gradient(
+      0deg,
+      transparent 0,
+      transparent 36px,
+      rgba(122, 122, 255, 0.08) 37px,
+      transparent 38px
+    );
+  mask-image: linear-gradient(90deg, transparent, black 16%, black 84%, transparent);
+  opacity: 0.42;
+  transform: translate3d(calc((var(--active-shift) - 3) * -18px), calc(var(--scroll-depth) * -0.72), 0);
+  animation: matrixDrift 11s linear infinite;
+}
+
+.orbPrimary {
+  right: 7%;
+  top: 16%;
+  width: min(30rem, 52vw);
+  height: min(30rem, 52vw);
+  border-radius: 999px;
+  background:
+    radial-gradient(circle, rgba(255, 0, 204, 0.22), transparent 63%),
+    radial-gradient(circle at 42% 36%, rgba(255, 106, 230, 0.2), transparent 46%);
+  filter: blur(20px);
+  opacity: 0.88;
+  transform: translate3d(calc((var(--active-shift) - 3) * 32px), calc(var(--scroll-depth) * -0.86), 0);
+}
+
+.orbSecondary {
+  bottom: 2%;
+  left: 4%;
+  width: min(24rem, 54vw);
+  height: min(24rem, 54vw);
+  border-radius: 999px;
+  background: radial-gradient(circle, rgba(122, 122, 255, 0.2), transparent 66%);
+  filter: blur(18px);
+  opacity: 0.72;
+  transform: translate3d(calc((var(--active-shift) - 3) * -24px), calc(var(--scroll-depth) * 0.74), 0);
+}
+
+.geometryOne {
+  right: 12%;
+  bottom: 18%;
+  width: 9rem;
+  height: 9rem;
+  border: 1px solid rgba(255, 0, 204, 0.28);
+  transform:
+    translate3d(0, calc(var(--scroll-depth) * -0.55), 0)
+    rotate(18deg);
+}
+
+.geometryTwo {
+  top: 22%;
+  left: 9%;
+  width: 6rem;
+  height: 6rem;
+  border: 1px solid rgba(122, 122, 255, 0.26);
+  border-radius: 999px;
+  transform:
+    translate3d(0, calc(var(--scroll-depth) * 0.42), 0)
+    scale(1.2);
+}
+
+.scanline {
+  inset: 0;
+  background: linear-gradient(180deg, transparent, rgba(255, 255, 255, 0.06), transparent);
+  opacity: 0.34;
+  transform: translate3d(0, calc((var(--active-shift) * 9%) - 20%), 0);
+  animation: scanSweep 7s ease-in-out infinite;
+}
+
+.particleField {
+  inset: 0;
+}
+
+.particleField i {
+  position: absolute;
+  width: 3px;
+  height: 3px;
+  border-radius: 999px;
+  background: rgba(234, 234, 240, 0.7);
+  box-shadow: 0 0 18px rgba(255, 0, 204, 0.32);
+  opacity: 0.34;
+  animation: particleFloat 9s ease-in-out infinite;
+}
+
+.particleField i:nth-child(1) { left: 9%; top: 28%; animation-delay: -0.5s; }
+.particleField i:nth-child(2) { left: 17%; top: 74%; animation-delay: -2s; }
+.particleField i:nth-child(3) { left: 24%; top: 42%; animation-delay: -4s; }
+.particleField i:nth-child(4) { left: 33%; top: 19%; animation-delay: -6s; }
+.particleField i:nth-child(5) { left: 41%; top: 82%; animation-delay: -1s; }
+.particleField i:nth-child(6) { left: 49%; top: 36%; animation-delay: -3s; }
+.particleField i:nth-child(7) { left: 55%; top: 68%; animation-delay: -5s; }
+.particleField i:nth-child(8) { left: 63%; top: 24%; animation-delay: -7s; }
+.particleField i:nth-child(9) { left: 70%; top: 78%; animation-delay: -2.5s; }
+.particleField i:nth-child(10) { left: 78%; top: 33%; animation-delay: -4.5s; }
+.particleField i:nth-child(11) { left: 86%; top: 58%; animation-delay: -6.5s; }
+.particleField i:nth-child(12) { left: 92%; top: 18%; animation-delay: -8s; }
+.particleField i:nth-child(13) { left: 12%; top: 52%; animation-delay: -1.5s; }
+.particleField i:nth-child(14) { left: 29%; top: 64%; animation-delay: -3.5s; }
+.particleField i:nth-child(15) { left: 66%; top: 46%; animation-delay: -5.5s; }
+.particleField i:nth-child(16) { left: 82%; top: 84%; animation-delay: -7.5s; }
+.particleField i:nth-child(17) { left: 38%; top: 11%; animation-delay: -2.2s; }
+.particleField i:nth-child(18) { left: 58%; top: 88%; animation-delay: -4.2s; }
+
+.carouselShell {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  min-height: calc(clamp(46rem, 74vw, 58rem) - clamp(2rem, 6vw, 4rem));
+  grid-template-rows: auto 1fr auto;
+  gap: clamp(1.1rem, 2.4vw, 1.75rem);
+}
+
+.carouselMeta {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1.25rem;
+  padding: clamp(0.25rem, 1vw, 0.75rem) clamp(0.25rem, 1.5vw, 1rem) 0;
+}
+
+.kicker {
+  margin: 0;
+  color: var(--primary-soft);
+  font-family: var(--font-bebas-neue), Impact, ui-sans-serif, system-ui, sans-serif;
+  font-size: clamp(1.2rem, 2.2vw, 1.8rem);
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.activeTitle {
+  margin: 0.45rem 0 0;
+  max-width: 44rem;
+  color: var(--text);
+  font-family: var(--font-bebas-neue), Impact, ui-sans-serif, system-ui, sans-serif;
+  font-size: clamp(3.3rem, 6.2vw, 6.9rem);
+  font-weight: 400;
+  line-height: 0.86;
+  text-transform: uppercase;
+}
+
+.counter {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  border: 1px solid rgba(234, 234, 240, 0.12);
+  border-radius: 999px;
+  background: rgba(10, 10, 15, 0.5);
+  color: var(--text-muted);
+  font-family: var(--font-bebas-neue), Impact, ui-sans-serif, system-ui, sans-serif;
+  font-size: clamp(1.35rem, 2vw, 1.8rem);
+  line-height: 1;
+  padding: 0.55rem 0.8rem;
+}
+
+.counter span:first-child {
+  color: var(--primary-soft);
+}
+
+.carouselViewport {
+  position: relative;
+  display: grid;
+  min-width: 0;
+  outline: none;
+  perspective: 1400px;
+}
+
+.carouselViewport:focus-visible {
+  outline: 2px solid var(--primary-soft);
+  outline-offset: 6px;
+}
+
+.stage {
+  position: relative;
+  display: grid;
+  min-height: clamp(34rem, 48vw, 41rem);
+  place-items: center;
+  transform-style: preserve-3d;
+}
+
+.slide {
+  position: absolute;
+  display: flex;
+  width: min(66vw, 42rem);
+  min-height: clamp(26rem, 36vw, 31rem);
+  transform:
+    translate3d(calc(var(--offset) * 48%), calc(var(--abs-offset) * 1.35rem), calc(var(--slide-depth) * 1px))
+    rotateY(calc(var(--offset) * -5deg))
+    rotateX(var(--pointer-tilt-y))
+    rotateZ(calc(var(--pointer-tilt-x) * 0.16))
+    scale(calc(1 - (var(--abs-offset) * 0.16)));
+  transform-origin: center;
+  transition:
+    opacity 520ms cubic-bezier(0.22, 1, 0.36, 1),
+    filter 520ms cubic-bezier(0.22, 1, 0.36, 1),
+    transform 620ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.slideVisible {
+  opacity: calc(1 - (var(--abs-offset) * 0.42));
+  pointer-events: none;
+}
+
+.slideHidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.slideActive {
+  z-index: 4;
+  pointer-events: auto;
+}
+
+.slide:not(.slideActive) {
+  z-index: calc(3 - var(--abs-offset));
+  filter: saturate(0.86) brightness(0.74);
+}
+
+.cardLink {
+  position: relative;
+  display: flex;
+  width: 100%;
+  min-height: 100%;
+  flex-direction: column;
+  overflow: hidden;
+  border: 1px solid rgba(234, 234, 240, 0.16);
+  border-radius: 8px;
+  background:
+    var(--project-bg),
+    linear-gradient(145deg, rgba(26, 26, 36, 0.72), rgba(10, 10, 15, 0.92));
+  box-shadow:
+    0 34px 100px rgba(0, 0, 0, 0.52),
+    0 0 42px rgba(255, 0, 204, 0.11),
+    inset 0 1px 0 rgba(255, 255, 255, 0.12);
+  color: inherit;
+  padding: clamp(1.35rem, 2.8vw, 2.15rem);
+  text-decoration: none;
+  backdrop-filter: blur(22px);
+  cursor: pointer;
+}
+
+.slideActive .cardLink {
+  border-color: rgba(255, 0, 204, 0.44);
+  box-shadow:
+    0 40px 130px rgba(0, 0, 0, 0.62),
+    0 0 58px rgba(255, 0, 204, 0.22),
+    inset 0 1px 0 rgba(255, 255, 255, 0.14);
+}
+
+.slide:not(.slideActive) .cardLink {
+  pointer-events: none;
+}
+
+.cardLink:focus-visible {
+  outline: 2px solid var(--primary-soft);
+  outline-offset: -8px;
+}
+
+.cardChrome {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.12), transparent 28%),
+    radial-gradient(circle at 18% 16%, rgba(255, 0, 204, 0.18), transparent 18rem),
+    linear-gradient(180deg, transparent 56%, rgba(255, 0, 204, 0.08));
+  opacity: 0.74;
+}
+
+.cardChrome::after {
+  position: absolute;
+  inset: 1rem;
+  content: "";
+  border-right: 1px solid rgba(255, 0, 204, 0.34);
+  border-bottom: 1px solid rgba(255, 0, 204, 0.34);
+  opacity: 0.6;
+}
+
+.cardTopline,
+.projectTitle,
+.projectSummary,
+.techList,
+.detailsLink {
+  position: relative;
+  z-index: 1;
+}
+
+.cardTopline {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.projectTag {
+  max-width: 80%;
+  border: 1px solid rgba(255, 0, 204, 0.46);
+  border-radius: 999px;
+  background: rgba(255, 0, 204, 0.08);
+  color: var(--primary-soft);
+  font-size: 0.76rem;
+  font-weight: 800;
+  line-height: 1.25;
+  padding: 0.52rem 0.76rem;
+}
+
+.slideNumber {
+  color: rgba(234, 234, 240, 0.34);
+  font-family: var(--font-bebas-neue), Impact, ui-sans-serif, system-ui, sans-serif;
+  font-size: clamp(2.2rem, 4vw, 3.6rem);
+  line-height: 0.8;
+}
+
+.projectTitle {
+  margin: clamp(1.45rem, 2vw, 2rem) 0 0;
+  color: var(--text);
+  font-family: var(--font-bebas-neue), Impact, ui-sans-serif, system-ui, sans-serif;
+  font-size: clamp(3.1rem, 5.2vw, 5.4rem);
+  font-weight: 400;
+  line-height: 0.88;
+  overflow-wrap: anywhere;
+  text-transform: uppercase;
+}
+
+.projectSummary {
+  max-width: 36rem;
+  margin: 1.1rem 0 0;
+  color: var(--text-muted);
+  font-size: clamp(1rem, 1.4vw, 1.08rem);
+  font-weight: 500;
+  line-height: 1.72;
+}
+
+.techList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: clamp(1.35rem, 2vw, 1.9rem);
+}
+
+.techChip {
+  max-width: 100%;
+  border: 1px solid rgba(234, 234, 240, 0.13);
+  border-radius: 999px;
+  background: rgba(10, 10, 15, 0.58);
+  color: var(--text);
+  font-size: 0.76rem;
+  font-weight: 700;
+  line-height: 1.2;
+  overflow-wrap: anywhere;
+  padding: 0.5rem 0.66rem;
+}
+
+.detailsLink,
+.activeDetailButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  width: fit-content;
+  border: 1px solid rgba(255, 0, 204, 0.44);
+  border-radius: 999px;
+  background: rgba(255, 0, 204, 0.08);
+  margin-top: auto;
+  padding: 0.78rem 1rem;
+  color: var(--primary-soft);
+  font-size: 0.95rem;
+  font-weight: 800;
+  line-height: 1.3;
+  text-decoration: none;
+  transition:
+    border-color 180ms ease,
+    box-shadow 180ms ease,
+    color 180ms ease,
+    transform 180ms ease;
+}
+
+.cardLink:hover .detailsLink,
+.cardLink:focus-visible .detailsLink,
+.activeDetailButton:hover,
+.activeDetailButton:focus-visible {
+  color: var(--primary);
+  border-color: rgba(255, 0, 204, 0.72);
+  outline: none;
+  box-shadow: 0 0 28px rgba(255, 0, 204, 0.24);
+  transform: translateX(4px);
+}
+
+.carouselFooter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.25rem;
+  padding: 0 clamp(0.25rem, 1.5vw, 1rem) clamp(0.25rem, 1vw, 0.75rem);
+}
+
+.activeDetailButton {
+  flex: 0 0 auto;
+  margin-top: 0;
+  margin-inline: auto;
+  background: rgba(255, 0, 204, 0.12);
+}
+
+.controls {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.controlButton {
+  display: grid;
+  width: 3rem;
+  height: 3rem;
+  place-items: center;
+  border: 1px solid rgba(234, 234, 240, 0.14);
+  border-radius: 999px;
+  background: rgba(17, 17, 24, 0.72);
+  color: var(--text);
+  cursor: pointer;
+  transition:
+    border-color 180ms ease,
+    box-shadow 180ms ease,
+    color 180ms ease,
+    transform 180ms ease;
+}
+
+.controlButton:hover,
+.controlButton:focus-visible {
+  border-color: rgba(255, 0, 204, 0.58);
+  color: var(--primary-soft);
+  outline: none;
+  box-shadow: 0 0 26px rgba(255, 0, 204, 0.24);
+  transform: translateY(-2px);
+}
+
+.progressWrap {
+  display: grid;
+  width: min(32rem, 58vw);
+  gap: 0.9rem;
+}
+
+.progressTrack {
+  height: 2px;
+  overflow: hidden;
+  border-radius: 999px;
+  background: rgba(234, 234, 240, 0.12);
+}
+
+.progressFill {
+  display: block;
+  width: calc(var(--progress) * 100%);
+  height: 100%;
+  border-radius: inherit;
+  background: linear-gradient(90deg, var(--primary), var(--accent));
+  box-shadow: 0 0 18px rgba(255, 0, 204, 0.5);
+  transition: width 420ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.dots {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 0.5rem;
+}
+
+.dot {
+  display: grid;
+  width: 1.45rem;
+  height: 1.45rem;
+  place-items: center;
+  border: 0;
+  border-radius: 999px;
+  background: transparent;
+  cursor: pointer;
+  padding: 0;
+}
+
+.dot span {
+  width: 0.45rem;
+  height: 0.45rem;
+  border-radius: inherit;
+  background: rgba(234, 234, 240, 0.34);
+  transition:
+    background 180ms ease,
+    box-shadow 180ms ease,
+    transform 180ms ease,
+    width 180ms ease;
+}
+
+.dot:hover span,
+.dot:focus-visible span,
+.dot[aria-current="true"] span {
+  width: 1rem;
+  background: var(--primary);
+  box-shadow: 0 0 18px rgba(255, 0, 204, 0.55);
+}
+
+.dot:focus-visible {
+  outline: 2px solid var(--primary-soft);
+  outline-offset: 2px;
+}
+
+.bgGraphite {
+  --project-bg: radial-gradient(circle at 18% 12%, rgba(255, 0, 204, 0.18), transparent 13rem);
+}
+
+.bgMagenta {
+  --project-bg: radial-gradient(circle at 18% 12%, rgba(255, 0, 204, 0.24), transparent 13rem);
+}
+
+.bgViolet {
+  --project-bg: radial-gradient(circle at 20% 14%, rgba(122, 122, 255, 0.24), transparent 14rem);
+}
+
+.bgSlate {
+  --project-bg: radial-gradient(circle at 18% 12%, rgba(156, 163, 175, 0.18), transparent 14rem);
+}
+
+.bgBlue {
+  --project-bg: radial-gradient(circle at 20% 14%, rgba(82, 132, 255, 0.24), transparent 14rem);
+}
+
+.bgEmerald {
+  --project-bg: radial-gradient(circle at 20% 14%, rgba(74, 222, 128, 0.18), transparent 14rem);
+}
+
+.bgSteel {
+  --project-bg: radial-gradient(circle at 20% 14%, rgba(148, 163, 184, 0.2), transparent 14rem);
+}
+
+.bgData {
+  --project-bg: radial-gradient(circle at 20% 14%, rgba(45, 212, 191, 0.17), transparent 14rem);
+}
+
+@keyframes particleFloat {
+  0%,
+  100% {
+    opacity: 0.18;
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+
+  50% {
+    opacity: 0.62;
+    transform: translate3d(16px, -20px, 0) scale(1.25);
+  }
+}
+
+@keyframes atmospherePulse {
+  0%,
+  100% {
+    filter: blur(8px) saturate(1);
+  }
+
+  50% {
+    filter: blur(12px) saturate(1.25);
+  }
+}
+
+@keyframes matrixDrift {
+  from {
+    background-position: 0 0, 0 0;
+  }
+
+  to {
+    background-position: 140px 0, 0 96px;
+  }
+}
+
+@keyframes scanSweep {
+  0%,
+  100% {
+    opacity: 0.14;
+  }
+
+  45%,
+  55% {
+    opacity: 0.42;
+  }
+}
+
+@media (max-width: 1100px) {
+  .showcase {
+    min-height: 50rem;
+  }
+
+  .slide {
+    width: min(72vw, 38rem);
+    transform:
+      translate3d(calc(var(--offset) * 42%), calc(var(--abs-offset) * 1.2rem), calc(var(--slide-depth) * 0.7px))
+      rotateY(calc(var(--offset) * -3.5deg))
+      scale(calc(1 - (var(--abs-offset) * 0.14)));
+  }
+
+  .projectTitle {
+    font-size: clamp(2.8rem, 6vw, 4.5rem);
+  }
+}
+
+@media (max-width: 767px) {
+  .showcase {
+    min-height: auto;
+    padding: 1rem;
+  }
+
+  .atmosphere {
+    inset: -8% -34%;
+  }
+
+  .orbPrimary,
+  .orbSecondary,
+  .geometryOne,
+  .geometryTwo {
+    opacity: 0.32;
+    transform: none;
+  }
+
+  .particleField i:nth-child(n + 9) {
+    display: none;
+  }
+
+  .carouselShell {
+    min-height: auto;
+  }
+
+  .carouselMeta {
+    flex-direction: column;
+  }
+
+  .counter {
+    align-self: flex-start;
+  }
+
+  .activeTitle {
+    font-size: clamp(3rem, 17vw, 4.8rem);
+  }
+
+  .carouselViewport {
+    perspective: none;
+  }
+
+  .stage {
+    min-height: auto;
+  }
+
+  .slide {
+    position: relative;
+    display: none;
+    width: 100%;
+    min-height: auto;
+    transform: none;
+    opacity: 1;
+    filter: none;
+  }
+
+  .slideActive {
+    display: flex;
+  }
+
+  .cardLink {
+    min-height: 33rem;
+    padding: 1.25rem;
+  }
+
+  .projectTag {
+    max-width: 72%;
+  }
+
+  .slideNumber {
+    font-size: 2.3rem;
+  }
+
+  .projectTitle {
+    font-size: clamp(2.65rem, 15vw, 4rem);
+  }
+
+  .projectSummary {
+    font-size: 0.96rem;
+  }
+
+  .carouselFooter {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .activeDetailButton {
+    justify-content: center;
+    width: 100%;
+    margin-inline: 0;
+  }
+
+  .controls {
+    justify-content: space-between;
+  }
+
+  .controlButton {
+    width: 3.2rem;
+    height: 3.2rem;
+  }
+
+  .progressWrap {
+    width: 100%;
+  }
+
+  .dots {
+    justify-content: center;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .atmosphere,
+  .deepGrid,
+  .dataLines,
+  .orbPrimary,
+  .orbSecondary,
+  .geometryOne,
+  .geometryTwo,
+  .scanline,
+  .particleField i,
+  .slide,
+  .detailsLink,
+  .activeDetailButton,
+  .controlButton,
+  .progressFill,
+  .dot span {
+    animation: none;
+    transition: none;
+    transform: none;
+  }
+
+  .particleField {
+    opacity: 0.25;
+  }
+}

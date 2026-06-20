@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 520">
+  <defs>
+    <linearGradient id="silver" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#fff"/>
+      <stop offset=".45" stop-color="#bfc1c8"/>
+      <stop offset="1" stop-color="#f7f7f8"/>
+    </linearGradient>
+    <filter id="purpleGlow" x="-80%" y="-80%" width="260%" height="260%">
+      <feGaussianBlur stdDeviation="7" result="blur"/>
+      <feFlood flood-color="#8b2cff" flood-opacity=".8"/>
+      <feComposite in2="blur" operator="in"/>
+      <feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <g transform="translate(80 65) scale(.62)">
+    <circle cx="256" cy="256" r="176" fill="none" stroke="#8b2cff" stroke-width="18" opacity=".8" filter="url(#purpleGlow)"/>
+    <circle cx="256" cy="256" r="176" fill="none" stroke="url(#silver)" stroke-width="24"/>
+    <circle cx="256" cy="256" r="148" fill="none" stroke="#fff" stroke-width="3" opacity=".65"/>
+    <path d="M143 164h226v41h-91v158h-44V205h-91z" fill="url(#silver)"/>
+    <path d="M143 164h226v41h-91v158h-44V205h-91z" fill="none" stroke="#fff" stroke-width="2" opacity=".6"/>
+  </g>
+  <text x="440" y="235" fill="url(#silver)" font-family="Montserrat, Avenir Next, Arial, sans-serif" font-size="82" font-weight="300" letter-spacing="24">TANIA OLIVEIRA</text>
+  <line x1="500" y1="325" x2="665" y2="325" stroke="#8b2cff" stroke-width="4" filter="url(#purpleGlow)"/>
+  <text x="710" y="342" fill="#d04dff" font-family="Montserrat, Avenir Next, Arial, sans-serif" font-size="36" font-weight="400" letter-spacing="18">SOFTWARE ENGINEER</text>
+  <line x1="1240" y1="325" x2="1405" y2="325" stroke="#8b2cff" stroke-width="4" filter="url(#purpleGlow)"/>
+</svg>

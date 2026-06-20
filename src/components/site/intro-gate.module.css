@@ -1,0 +1,375 @@
+.intro {
+  position: relative;
+  display: grid;
+  min-height: 100svh;
+  place-items: center;
+  overflow: hidden;
+  background: #000;
+  color: var(--text);
+  isolation: isolate;
+  transition:
+    opacity 520ms ease,
+    filter 520ms ease,
+    transform 620ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.exiting {
+  opacity: 0;
+  filter: blur(8px);
+  pointer-events: none;
+  transform: scale(1.015);
+}
+
+.ambientLayer,
+.glowField,
+.silverDust {
+  position: absolute;
+  pointer-events: none;
+}
+
+.ambientLayer {
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.glowField {
+  inset: -20%;
+  background:
+    radial-gradient(circle at 50% 48%, rgba(255, 0, 204, 0.12), transparent 22rem),
+    radial-gradient(circle at 50% 56%, rgba(122, 122, 255, 0.08), transparent 24rem);
+  filter: blur(10px);
+  opacity: 0.82;
+}
+
+.silverDust {
+  inset: 0;
+  background-image: radial-gradient(circle, rgba(234, 234, 240, 0.45) 1px, transparent 1px);
+  background-size: 46px 46px;
+  opacity: 0.045;
+  mask-image: radial-gradient(circle at center, black 0 24%, transparent 62%);
+}
+
+.glitterCanvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.92;
+  pointer-events: none;
+}
+
+.logoStage {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  width: min(100%, 54rem);
+  min-height: 28rem;
+  align-content: center;
+  justify-items: center;
+  padding: clamp(1.5rem, 5vw, 4rem);
+  text-align: center;
+}
+
+.iconButton {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  width: clamp(9rem, 20vw, 15rem);
+  height: clamp(9rem, 20vw, 15rem);
+  place-items: center;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  cursor: pointer;
+  padding: 0;
+  transform: translate3d(0, 0, 0) scale(1);
+  transition:
+    filter 220ms ease,
+    transform 320ms cubic-bezier(0.22, 1, 0.36, 1);
+  animation:
+    iconEnter 850ms cubic-bezier(0.22, 1, 0.36, 1) both,
+    iconBreathe 7s ease-in-out 1s infinite;
+}
+
+.iconButton:hover,
+.iconButton:focus-visible {
+  transform: translate3d(0, -0.2rem, 0) scale(1.03);
+  filter:
+    drop-shadow(0 0 34px rgba(255, 0, 204, 0.32))
+    drop-shadow(0 0 76px rgba(122, 122, 255, 0.18));
+}
+
+.iconButton:focus-visible {
+  outline: none;
+}
+
+.iconButton:disabled {
+  cursor: default;
+}
+
+.iconImage {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  pointer-events: none;
+  user-select: none;
+  filter:
+    drop-shadow(0 0 16px rgba(255, 0, 204, 0.18))
+    drop-shadow(0 0 40px rgba(122, 122, 255, 0.1));
+}
+
+.revealed .iconButton {
+  pointer-events: none;
+  animation: iconSettle 720ms cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.wordmarkWrap {
+  display: grid;
+  width: 100%;
+  min-height: clamp(8rem, 18vw, 12rem);
+  justify-items: center;
+  margin-top: clamp(2rem, 5vw, 3.2rem);
+}
+
+.wordmarkLink {
+  display: inline-grid;
+  gap: clamp(0.8rem, 2vw, 1.15rem);
+  max-width: 100%;
+  justify-items: center;
+  color: inherit;
+  cursor: pointer;
+  text-decoration: none;
+  animation: wordmarkEnter 420ms ease both;
+}
+
+.wordmarkLink:focus-visible {
+  outline: none;
+  filter: drop-shadow(0 0 28px rgba(255, 0, 204, 0.24));
+}
+
+.wordmarkLink:hover .nameLine,
+.wordmarkLink:focus-visible .nameLine {
+  text-shadow:
+    0 0 22px rgba(255, 255, 255, 0.22),
+    0 0 46px rgba(255, 0, 204, 0.24);
+}
+
+.nameLine {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  color: rgba(246, 246, 250, 0.94);
+  font-family: var(--font-bebas-neue), Impact, ui-sans-serif, system-ui, sans-serif;
+  font-size: clamp(3rem, 9vw, 7.4rem);
+  font-weight: 400;
+  letter-spacing: clamp(0.08em, 1.2vw, 0.18em);
+  line-height: 0.88;
+  text-transform: uppercase;
+  transition: text-shadow 220ms ease;
+}
+
+.nameLine::after {
+  position: absolute;
+  inset: -12% -6%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.34),
+    rgba(255, 0, 204, 0.18),
+    transparent
+  );
+  content: "";
+  mix-blend-mode: screen;
+  opacity: 0;
+  transform: translateX(-115%);
+  animation: signatureScan 2.3s cubic-bezier(0.22, 1, 0.36, 1) 300ms forwards;
+}
+
+.nameCharacter {
+  display: inline-block;
+  opacity: 0;
+  filter: blur(8px);
+  transform: translate3d(0.14em, 0.16em, 0);
+  animation: characterReveal 950ms cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  animation-delay: calc(300ms + (var(--char-index) * 105ms));
+}
+
+.roleLine {
+  display: grid;
+  grid-template-columns: minmax(1.8rem, 1fr) auto minmax(1.8rem, 1fr);
+  align-items: center;
+  gap: clamp(0.7rem, 2vw, 1.4rem);
+  color: var(--primary-soft);
+  font-size: clamp(0.78rem, 2.2vw, 1.25rem);
+  font-weight: 800;
+  letter-spacing: clamp(0.18em, 1.3vw, 0.46em);
+  line-height: 1.3;
+  opacity: 0;
+  text-transform: uppercase;
+  animation: roleReveal 1300ms ease 2650ms forwards;
+}
+
+.roleLine span:first-child,
+.roleLine span:last-child {
+  display: block;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(255, 0, 204, 0.88));
+  transform: scaleX(0);
+  transform-origin: right;
+  animation: lineReveal 850ms cubic-bezier(0.22, 1, 0.36, 1) 3650ms forwards;
+}
+
+.roleLine span:last-child {
+  background: linear-gradient(90deg, rgba(255, 0, 204, 0.88), transparent);
+  transform-origin: left;
+}
+
+@keyframes iconEnter {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 18px, 0) scale(0.92);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+}
+
+@keyframes iconBreathe {
+  0%,
+  100% {
+    filter: drop-shadow(0 0 16px rgba(255, 0, 204, 0.1));
+  }
+
+  50% {
+    filter: drop-shadow(0 0 28px rgba(255, 0, 204, 0.16));
+  }
+}
+
+@keyframes iconSettle {
+  to {
+    transform: translate3d(0, -0.65rem, 0) scale(0.92);
+  }
+}
+
+@keyframes wordmarkEnter {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 0.8rem, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes characterReveal {
+  to {
+    opacity: 1;
+    filter: blur(0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes signatureScan {
+  0% {
+    opacity: 0;
+    transform: translateX(-115%);
+  }
+
+  25%,
+  62% {
+    opacity: 0.56;
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateX(115%);
+  }
+}
+
+@keyframes roleReveal {
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes lineReveal {
+  to {
+    transform: scaleX(1);
+  }
+}
+
+@media (max-width: 767px) {
+  .logoStage {
+    min-height: 24rem;
+    padding-inline: 1rem;
+  }
+
+  .iconButton {
+    width: clamp(8rem, 40vw, 10.5rem);
+    height: clamp(8rem, 40vw, 10.5rem);
+  }
+
+  .nameLine {
+    font-size: clamp(2.55rem, 13vw, 4.1rem);
+    letter-spacing: clamp(0.045em, 1.2vw, 0.1em);
+  }
+
+  .roleLine {
+    gap: 0.65rem;
+    font-size: clamp(0.7rem, 3vw, 0.9rem);
+    letter-spacing: clamp(0.11em, 1.3vw, 0.24em);
+  }
+}
+
+@media (max-width: 390px) {
+  .nameLine {
+    font-size: clamp(2.2rem, 12vw, 3.2rem);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .intro,
+  .iconButton,
+  .wordmarkLink,
+  .nameCharacter,
+  .nameLine::after,
+  .roleLine,
+  .roleLine span:first-child,
+  .roleLine span:last-child {
+    animation: none;
+    transition: none;
+  }
+
+  .exiting {
+    filter: none;
+    transform: none;
+  }
+
+  .glitterCanvas {
+    display: none;
+  }
+
+  .nameCharacter,
+  .roleLine {
+    opacity: 1;
+    filter: none;
+    transform: none;
+  }
+
+  .nameLine::after {
+    display: none;
+  }
+
+  .roleLine span:first-child,
+  .roleLine span:last-child {
+    transform: scaleX(1);
+  }
+}

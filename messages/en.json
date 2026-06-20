@@ -1,0 +1,412 @@
+{
+  "meta": {
+    "title": "Tânia Oliveira | Software Engineering Portfolio",
+    "description": "Multilingual portfolio for Tânia Oliveira, focused on software engineering, web applications, SaaS platforms, APIs, business integrations and production-oriented projects.",
+    "keywords": [
+      "Tânia Oliveira",
+      "software engineering",
+      "web development",
+      "frontend",
+      "backend",
+      "React",
+      "SaaS",
+      "REST APIs",
+      "ERP",
+      "CRM"
+    ]
+  },
+  "site": {
+    "navigation": {
+      "brand": "Tânia Oliveira",
+      "initials": "TO",
+      "role": "Software Engineering / Web Applications",
+      "aria": "Main navigation",
+      "homeAria": "Go to home page",
+      "skip": "Skip to content",
+      "languageLabel": "Select language",
+      "openMenu": "Open menu",
+      "closeMenu": "Close menu",
+      "items": [
+        {
+          "label": "Home",
+          "href": "/home"
+        },
+        {
+          "label": "About Me",
+          "href": "/under-construction"
+        },
+        {
+          "label": "Achievements",
+          "href": "/under-construction"
+        },
+        {
+          "label": "Projects",
+          "href": "/under-construction"
+        },
+        {
+          "label": "Contact",
+          "href": "/under-construction"
+        }
+      ],
+      "languages": [
+        {
+          "code": "pt",
+          "label": "PT"
+        },
+        {
+          "code": "en",
+          "label": "EN"
+        },
+        {
+          "code": "es",
+          "label": "ES"
+        }
+      ]
+    },
+    "cv": {
+      "label": "Download CV",
+      "href": "/TODO_CV_FILE.pdf"
+    },
+    "hero": {
+      "eyebrow": "Tânia Oliveira / Software Engineering Portfolio",
+      "title": {
+        "first": "SOFTWARE",
+        "highlight": "ENGINEER"
+      },
+      "description": "Software engineering for web products, business integrations and production-oriented systems.",
+      "portraitAlt": "Black-and-white portrait of Tânia Oliveira",
+      "typewriter": [
+        "Software Engineering",
+        "Frontend and Backend Development",
+        "Business Web Applications",
+        "SaaS Platforms",
+        "API Integrations",
+        "Business Systems"
+      ],
+      "microLabels": [
+        "SOFTWARE ENGINEERING",
+        "FRONTEND AND BACKEND",
+        "APIs • SAAS • BUSINESS SYSTEMS"
+      ],
+      "cta": {
+        "projects": "View Projects",
+        "contact": "Contact"
+      }
+    },
+    "underConstruction": {
+      "badge": "First launch",
+      "prompt": "portfolio.monthly.release()",
+      "title": "Page under construction",
+      "subtitle": "I am launching this portfolio step by step.",
+      "text": "The Home page is already available and, from here, I will publish one new page every month, with more detail about my background, achievements, projects and contact options.",
+      "nextLabel": "Next page",
+      "nextPage": "About Me",
+      "button": "Back to Home"
+    },
+    "educationRunner": {
+      "eyebrow": "EDUCATION",
+      "title": "Journey in motion",
+      "description": "Jump over the obstacles and unlock the education steps that shaped my path.",
+      "trackLabel": "Education and courses",
+      "progressLabel": "Growing path",
+      "instructionLabel": "Click to jump",
+      "unlockedLabel": "Unlocked course",
+      "actionLabel": "Jump over the obstacle and unlock the next course",
+      "completeLabel": "Journey unlocked",
+      "nextGoal": {
+        "eyebrow": "It does not end here",
+        "title": "Next goals",
+        "primary": "CSSLP — Secure Software Lifecycle",
+        "secondary": "Azure Fundamentals — AZ-900"
+      },
+      "items": [
+        {
+          "title": "Fullstack Developer Bootcamp",
+          "status": "Completed"
+        },
+        {
+          "title": "Digital Transformation",
+          "status": "Completed"
+        },
+        {
+          "title": "Java Bootcamp",
+          "status": "Completed"
+        },
+        {
+          "title": "Frontend and Object-Oriented Programming",
+          "status": "Completed"
+        },
+        {
+          "title": "React Developer",
+          "status": "Completed"
+        },
+        {
+          "title": "Product Owner Fundamentals",
+          "status": "Completed"
+        },
+        {
+          "title": "Python Programming",
+          "status": "Completed"
+        },
+        {
+          "title": "Web Programming with PHP",
+          "status": "Completed"
+        },
+        {
+          "title": "CET Computer Networks and Systems — Level 5",
+          "status": "Completed"
+        },
+        {
+          "title": "Software Engineering",
+          "status": "In progress"
+        }
+      ]
+    },
+    "about": {
+      "eyebrow": "About Me",
+      "title": "Junior software engineering profile focused on web development and integrations.",
+      "description": "Final-year Software Engineering student focused on web applications, backend, APIs, data and secure development practices.",
+      "statement": "I am Tânia Oliveira, a final-year Software Engineering student and junior developer with hands-on experience building web applications, responsive interfaces, API integrations, data preparation workflows and solutions connected to business systems. I am especially interested in web development, AI-assisted programming, backend/API integration and secure development practices, with a strong focus on structure, usability and technical quality.",
+      "principles": [
+        {
+          "title": "Engineering",
+          "text": "Academic foundation in Software Engineering applied to analysis, implementation, integration and system evolution."
+        },
+        {
+          "title": "Web",
+          "text": "Hands-on experience with interfaces, web applications, PWAs, dashboards, business websites and modern frontend architecture."
+        },
+        {
+          "title": "Integration",
+          "text": "Interest and practical work with APIs, databases, ERP/CRM integrations, validation, traceability and production-oriented flows."
+        }
+      ]
+    },
+    "projects": {
+      "eyebrow": "Projects",
+      "title": "Projects and Systems",
+      "description": "An anonymised selection of solutions I developed, integrating frontend, backend, data, APIs, automation and business systems.",
+      "ariaLabel": "Selected project showcase",
+      "cardAriaLabel": "View details for project {title}",
+      "contributionLabel": "Implemented",
+      "detailsLabel": "View details",
+      "previousLabel": "Previous project",
+      "nextLabel": "Next project",
+      "progressLabel": "Select project"
+    },
+    "projectDetail": {
+      "back": "Back to projects",
+      "overview": "Overview",
+      "technicalStack": "Technical stack",
+      "objective": "Objective",
+      "contribution": "Contribution",
+      "implementationSummary": "Implementation summary",
+      "notFoundEyebrow": "Project detail",
+      "notFoundTitle": "Project not found",
+      "notFoundDescription": "This project could not be found. Return to the project showcase and choose another project."
+    },
+    "skills": {
+      "eyebrow": "Skills",
+      "title": "Technical stack for web development, integrations, data and business systems.",
+      "description": "Skills grouped by area with focus on implementation, maintenance and software delivery in real project contexts.",
+      "groups": [
+        {
+          "key": "frontend",
+          "title": "Frontend",
+          "items": [
+            "HTML",
+            "CSS",
+            "Sass",
+            "Bootstrap",
+            "JavaScript",
+            "React",
+            "Angular"
+          ]
+        },
+        {
+          "key": "backend",
+          "title": "Backend",
+          "items": [
+            "NodeJS",
+            "Python",
+            "PHP",
+            "Laravel",
+            "REST APIs"
+          ]
+        },
+        {
+          "key": "integrations",
+          "title": "APIs",
+          "items": [
+            "REST APIs",
+            "Frontend/backend integration",
+            "Data validation",
+            "External services"
+          ]
+        },
+        {
+          "key": "databases",
+          "title": "Databases",
+          "items": [
+            "MySQL",
+            "SQLite",
+            "Relational modeling",
+            "Data persistence"
+          ]
+        },
+        {
+          "key": "tools",
+          "title": "Workflow",
+          "items": [
+            "Kanban",
+            "DevOps",
+            "GitHub",
+            "Bitbucket",
+            "Collaborative work"
+          ]
+        }
+      ]
+    },
+    "experience": {
+      "eyebrow": "Experience / CV",
+      "title": "Technical path across frontend, full-stack, business systems and Software Engineering education.",
+      "description": "Professional and academic experience oriented to web applications, integrations, databases and production software.",
+      "items": [
+        {
+          "period": "March 2024",
+          "role": "Fullstack Developer",
+          "company": "Private web platform",
+          "type": "Full-stack",
+          "description": "Full-stack development on a web platform, collaborating on feature implementation and integration between frontend and backend logic."
+        },
+        {
+          "period": "March 2021 - September 2021",
+          "role": "FrontEnd Developer",
+          "company": "Private insurance company",
+          "type": "Frontend",
+          "description": "Frontend development for an insurance company, focused on web interfaces, visual structure and digital experience."
+        }
+      ],
+      "educationTitle": "Education",
+      "educationItems": [
+        {
+          "period": "2023 - 2025",
+          "title": "B.Sc. in Software Engineering",
+          "institution": "Software Engineering"
+        },
+        {
+          "period": "2024",
+          "title": "CET Computer Networks and Systems",
+          "institution": "IEFP"
+        }
+      ],
+      "languagesTitle": "Languages",
+      "languagesItems": [
+        {
+          "language": "Portuguese",
+          "level": "Native"
+        },
+        {
+          "language": "English",
+          "level": "B2"
+        },
+        {
+          "language": "French",
+          "level": "B1"
+        }
+      ]
+    },
+    "coverLetter": {
+      "eyebrow": "Cover letter",
+      "title": "A technical introduction for software teams and projects.",
+      "description": "Base text aligned with practical experience in web development, integrations, data and business systems.",
+      "paragraphs": [
+        "I am Tânia Oliveira, a final-year Software Engineering student with experience in frontend development, backend development, web applications, SaaS platforms, APIs and enterprise integrations.",
+        "I have worked on corporate websites, operational platforms, ERP/CRM connectors, marketplace synchronization and CRM data preparation workflows, always respecting business context confidentiality.",
+        "My approach is technical, organized and production-oriented: structured code, data validation, logs, GitHub/Bitbucket collaboration and attention to future maintenance."
+      ]
+    },
+    "contact": {
+      "eyebrow": "Contact",
+      "title": "Contact",
+      "description": "For professional opportunities, technical collaboration or software projects, you can contact me directly through the channels below.",
+      "email": "taniaelizaoliveira@gmail.com"
+    },
+    "social": {
+      "github": "https://github.com/TaniaElizaOliveira",
+      "linkedin": "https://www.linkedin.com/in/oliveira-tania/",
+      "links": [
+        {
+          "label": "GitHub",
+          "href": "https://github.com/TaniaElizaOliveira"
+        },
+        {
+          "label": "LinkedIn",
+          "href": "https://www.linkedin.com/in/oliveira-tania/"
+        }
+      ]
+    },
+    "footer": {
+      "brand": "Tânia Oliveira",
+      "description": "Software engineering portfolio for web applications, SaaS, APIs and business integrations.",
+      "prompt": "portfolio.status()",
+      "role": "Software Engineering finalist",
+      "location": "Portugal",
+      "focus": "Frontend · .NET · Web Applications · ERP Integrations",
+      "mindset": "Always learning, building and improving",
+      "availability": "Open to opportunities",
+      "linksLabel": "Navigation",
+      "socialLabel": "Profiles",
+      "builtLine": "Built with focus on engineering, clarity and production-oriented systems.",
+      "links": [
+        {
+          "label": "About",
+          "href": "/under-construction"
+        },
+        {
+          "label": "Projects",
+          "href": "/under-construction"
+        },
+        {
+          "label": "Achievements",
+          "href": "/under-construction"
+        },
+        {
+          "label": "Contact",
+          "href": "/under-construction"
+        }
+      ],
+      "languageLabel": "Select language",
+      "languages": [
+        {
+          "code": "pt",
+          "label": "PT"
+        },
+        {
+          "code": "en",
+          "label": "EN"
+        },
+        {
+          "code": "es",
+          "label": "ES"
+        }
+      ],
+      "copyright": "© 2026 Tânia Oliveira. All rights reserved."
+    },
+    "achievements": {
+      "eyebrow": "Achievements",
+      "title": "Achievements",
+      "description": "Selected milestones from my academic and technical path, focused on software development, business systems and digital solutions.",
+      "items": [
+        "Final-year Software Engineering student",
+        "Responsive web application development",
+        "Hands-on frontend and backend experience",
+        "API and business-system integrations",
+        "CRM data preparation, cleaning and validation",
+        "Experience with SaaS solutions and multi-tenant architectures",
+        "Work with ERP, CRM, marketplaces and databases"
+      ],
+      "placeholder": "Reserved area for a future interactive technical terminal experience."
+    }
+  }
+}
