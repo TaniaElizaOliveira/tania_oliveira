@@ -30,10 +30,10 @@ export function UnderConstructionPage({
         <p className={styles.subtitle}>{content.subtitle}</p>
         <p className={styles.text}>{content.text}</p>
 
-        <div className={styles.nextPageCard}>
+        <Link className={styles.nextPageCard} href={`/${locale}/about`}>
           <span>{content.nextLabel}</span>
           <strong>{content.nextPage}</strong>
-        </div>
+        </Link>
 
         <Link className={styles.homeLink} href={`/${locale}/home`}>
           {content.button}

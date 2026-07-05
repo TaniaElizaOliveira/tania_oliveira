@@ -39,12 +39,14 @@ const languageNames: Record<string, string> = {
   pt: "Português",
   en: "English",
   es: "Español",
+  fr: "Français",
 };
 
 const bubblePositions = [
   { x: "-6.2rem", y: "2.35rem" },
   { x: "-3.25rem", y: "4.08rem" },
   { x: "-0.25rem", y: "3.2rem" },
+  { x: "2.65rem", y: "1.75rem" },
 ];
 
 export function LanguageSwitcher({

@@ -1,0 +1,497 @@
+{
+  "meta": {
+    "title": "Tânia Oliveira | Portfolio d'Ingénierie Logicielle",
+    "description": "Portfolio multilingue de Tânia Oliveira, axé sur l'ingénierie logicielle, les applications web, les plateformes SaaS, les APIs, les intégrations métier et les projets orientés production.",
+    "keywords": [
+      "Tânia Oliveira",
+      "software engineering",
+      "web development",
+      "frontend",
+      "backend",
+      "React",
+      "SaaS",
+      "REST APIs",
+      "ERP",
+      "CRM"
+    ]
+  },
+  "site": {
+    "navigation": {
+      "brand": "Tânia Oliveira",
+      "initials": "TO",
+      "role": "Ingénierie Logicielle / Applications Web",
+      "aria": "Navigation principale",
+      "homeAria": "Aller à la page d'accueil",
+      "skip": "Aller au contenu",
+      "languageLabel": "Sélectionner la langue",
+      "openMenu": "Ouvrir le menu",
+      "closeMenu": "Fermer le menu",
+      "items": [
+        {
+          "label": "Accueil",
+          "href": "/home"
+        },
+        {
+          "label": "À propos",
+          "href": "/about"
+        },
+        {
+          "label": "Réalisations",
+          "href": "/under-construction"
+        },
+        {
+          "label": "Projets",
+          "href": "/under-construction"
+        },
+        {
+          "label": "Contact",
+          "href": "/under-construction"
+        }
+      ],
+      "languages": [
+        {
+          "code": "pt",
+          "label": "PT"
+        },
+        {
+          "code": "en",
+          "label": "EN"
+        },
+        {
+          "code": "es",
+          "label": "ES"
+        },
+        {
+          "code": "fr",
+          "label": "FR"
+        }
+      ]
+    },
+    "cv": {
+      "label": "Télécharger le CV",
+      "href": "/cv/Tania_Oliveira_CV_FR.pdf"
+    },
+    "hero": {
+      "eyebrow": "Tânia Oliveira / Portfolio d'Ingénierie Logicielle",
+      "title": {
+        "first": "INGÉNIERIE",
+        "highlight": "LOGICIELLE"
+      },
+      "description": "Ingénierie logicielle appliquée aux produits web, aux intégrations métier et aux systèmes orientés production.",
+      "portraitAlt": "Portrait en noir et blanc de Tânia Oliveira",
+      "typewriter": [
+        "Ingénierie Logicielle",
+        "Développement Frontend et Backend",
+        "Applications Web Métier",
+        "Plateformes SaaS",
+        "Intégrations avec APIs",
+        "Systèmes d'entreprise"
+      ],
+      "microLabels": [
+        "INGÉNIERIE LOGICIELLE",
+        "FRONTEND ET BACKEND",
+        "APIs • SAAS • SYSTÈMES MÉTIER"
+      ],
+      "cta": {
+        "projects": "Voir les projets",
+        "contact": "Contact"
+      }
+    },
+    "underConstruction": {
+      "badge": "First launch",
+      "prompt": "portfolio.monthly.release()",
+      "title": "Page under construction",
+      "subtitle": "I am launching this portfolio step by step.",
+      "text": "The Home page is already available and, from here, I will publish one new page every month, with more detail about my background, achievements, projects and contact options.",
+      "nextLabel": "Next page",
+      "nextPage": "About Me",
+      "button": "Back to Home"
+    },
+    "educationRunner": {
+      "eyebrow": "FORMATION",
+      "title": "Parcours en mouvement",
+      "description": "Saute les obstacles et débloque les étapes de formation qui ont façonné mon parcours.",
+      "trackLabel": "Formation et cours",
+      "progressLabel": "Parcours en progression",
+      "instructionLabel": "Clique pour sauter",
+      "unlockedLabel": "Débloqué",
+      "actionLabel": "Saute l'obstacle et débloque la prochaine formation",
+      "completeLabel": "Parcours débloqué",
+      "nextGoal": {
+        "eyebrow": "Cela ne s'arrête pas ici",
+        "title": "Prochains objectifs",
+        "primary": "CSSLP — Secure Software Lifecycle",
+        "secondary": "Azure Fundamentals — AZ-900"
+      },
+      "items": [
+        {
+          "title": "Bootcamp Développeuse Fullstack",
+          "status": "Terminé"
+        },
+        {
+          "title": "Transformation digitale",
+          "status": "Terminé"
+        },
+        {
+          "title": "Java Bootcamp",
+          "status": "Terminé"
+        },
+        {
+          "title": "Frontend et programmation orientée objet",
+          "status": "Terminé"
+        },
+        {
+          "title": "Développeuse React",
+          "status": "Terminé"
+        },
+        {
+          "title": "Fondamentaux Product Owner",
+          "status": "Terminé"
+        },
+        {
+          "title": "Programmation Python",
+          "status": "Terminé"
+        },
+        {
+          "title": "Programmation web avec PHP",
+          "status": "Terminé"
+        },
+        {
+          "title": "CET Réseaux et Systèmes Informatiques — Niveau 5",
+          "status": "Terminé"
+        },
+        {
+          "title": "Ingénierie Logicielle",
+          "status": "En cours"
+        }
+      ]
+    },
+    "about": {
+      "eyebrow": "À propos",
+      "title": "INGÉNIERIE LOGICIELLE, FRONTEND ET INTÉGRATIONS POUR DES PROBLÈMES RÉELS.",
+      "description": "Je suis Tânia Oliveira, étudiante en dernière phase d'Ingénierie Logicielle et développeuse junior avec une expérience pratique en projets web, interfaces responsives, intégration d'APIs, Sage 50c, e-commerce, backoffice et applications internes.",
+      "introLabel": "Qui je suis",
+      "introParagraphs": [
+        "Je suis une développeuse en début de carrière avec une expérience pratique en environnement professionnel. Je travaille surtout avec le développement web, les interfaces responsives, l'intégration d'APIs, l'organisation de données et les solutions liées aux systèmes d'entreprise.",
+        "Dans mes projets récents, j'ai travaillé avec React, Vite, JavaScript, TypeScript, C#/.NET, Sage 50c, WooCommerce, MongoDB, Render et Vercel. J'aime transformer des besoins flous en interfaces claires, flux fonctionnels et solutions utiles au quotidien des équipes."
+      ],
+      "principles": [
+        {
+          "title": "Ingénierie",
+          "text": "Base en Ingénierie Logicielle, réseaux, programmation, bases de données, APIs et développement sécurisé."
+        },
+        {
+          "title": "Web",
+          "text": "Création d'interfaces responsives avec React, Vite, JavaScript, HTML, CSS et intégration avec des services externes."
+        },
+        {
+          "title": "Intégration",
+          "text": "Expérience pratique avec APIs, Sage 50c, WooCommerce, CRM, synchronisation de données et flux métier."
+        }
+      ],
+      "built": {
+        "eyebrow": "Projets pratiques",
+        "title": "CE QUE J'AI CONSTRUIT",
+        "items": [
+          {
+            "title": "Sage 50c + intégrations",
+            "text": "Je travaille sur des flux d'intégration entre Sage 50c, CRM, WooCommerce et applications web, avec un focus sur la synchronisation de clients, produits, stock, documents et données commerciales."
+          },
+          {
+            "title": "Applications web",
+            "text": "Développement de pages et d'applications avec React/Vite, composants réutilisables, layouts responsives et déploiement dans des environnements comme Vercel et Render."
+          },
+          {
+            "title": "Backoffice et opérations",
+            "text": "Participation à des plateformes internes avec backoffice, PWA opérationnelle, authentification, APIs, gestion de tâches, données et préparation pour la production."
+          },
+          {
+            "title": "Communication technique",
+            "text": "Création de documentation, analyse d'erreurs, validation de builds, tests, tickets et explications techniques pour clients et équipes."
+          }
+        ]
+      },
+      "stack": {
+        "eyebrow": "Outils",
+        "title": "STACK ACTUELLE",
+        "groups": [
+          {
+            "title": "Frontend",
+            "items": ["React", "Vite", "JavaScript", "TypeScript", "HTML", "CSS", "Bootstrap"]
+          },
+          {
+            "title": "Intégrations",
+            "items": ["REST APIs", "Sage 50c", "WooCommerce", "CRM", "Postman"]
+          },
+          {
+            "title": "Backend / Données",
+            "items": ["Node.js", "C#/.NET", "PHP", "Laravel", "MongoDB", "MySQL"]
+          },
+          {
+            "title": "Deploy / Workflow",
+            "items": ["GitHub", "Render", "Vercel", "Kanban", "documentation technique"]
+          }
+        ]
+      },
+      "workflow": {
+        "eyebrow": "Processus",
+        "title": "COMMENT JE TRAVAILLE",
+        "items": [
+          "Je comprends d'abord le problème métier avant de penser à l'interface.",
+          "Je cherche à construire des layouts responsives, clairs et sans complexité inutile.",
+          "Je valide les intégrations avec APIs, données réelles et flux complets.",
+          "Je documente les décisions, les erreurs et les étapes techniques pour faciliter la maintenance."
+        ]
+      },
+      "growth": {
+        "eyebrow": "Évolution continue",
+        "title": "ÉVOLUTION CONTINUE",
+        "text": "Je consolide mon expérience en Ingénierie Logicielle, avec un focus sur le frontend moderne, l'architecture d'applications web, les APIs, le backend et l'intégration de systèmes d'entreprise. Mon objectif est de grandir comme développeuse capable de créer des solutions complètes, utilisables et bien structurées.",
+        "badges": [
+          "Ingénierie Frontend",
+          "Intégration d'APIs",
+          "Bases Backend",
+          "Développement assisté par IA",
+          "Développement sécurisé"
+        ]
+      },
+      "cta": {
+        "title": "VOUS VOULEZ VOIR CE QUE J'AI DÉJÀ CONSTRUIT ?",
+        "text": "Découvrez les projets, expériences et solutions qui font partie de mon parcours.",
+        "projects": "Voir les projets",
+        "contact": "Contact",
+        "cv": "Télécharger le CV technique"
+      }
+    },
+    "projects": {
+      "eyebrow": "Projets",
+      "title": "Projets et Systèmes",
+      "description": "Une sélection anonymisée de solutions que j'ai développées, intégrant frontend, backend, données, APIs, automatisation et systèmes métier.",
+      "ariaLabel": "Présentation de projets sélectionnés",
+      "cardAriaLabel": "Voir les détails du projet {title}",
+      "contributionLabel": "Implémenté",
+      "detailsLabel": "Voir les détails",
+      "previousLabel": "Projet précédent",
+      "nextLabel": "Projet suivant",
+      "progressLabel": "Sélectionner un projet"
+    },
+    "projectDetail": {
+      "back": "Retour aux projets",
+      "overview": "Vue d'ensemble",
+      "technicalStack": "Stack technique",
+      "objective": "Objectif",
+      "contribution": "Contribution",
+      "implementationSummary": "Résumé de l'implémentation",
+      "notFoundEyebrow": "Détail du projet",
+      "notFoundTitle": "Projet introuvable",
+      "notFoundDescription": "Ce projet est introuvable. Retournez à la présentation des projets et choisissez un autre projet."
+    },
+    "skills": {
+      "eyebrow": "Compétences",
+      "title": "Stack technique pour développement web, intégrations, données et systèmes métier.",
+      "description": "Compétences regroupées par domaine, avec un focus sur l'implémentation, la maintenance et la livraison logicielle dans des contextes réels.",
+      "groups": [
+        {
+          "key": "frontend",
+          "title": "Frontend",
+          "items": [
+            "HTML",
+            "CSS",
+            "Sass",
+            "Bootstrap",
+            "JavaScript",
+            "React",
+            "Angular"
+          ]
+        },
+        {
+          "key": "backend",
+          "title": "Backend",
+          "items": [
+            "NodeJS",
+            "Python",
+            "PHP",
+            "Laravel",
+            "REST APIs"
+          ]
+        },
+        {
+          "key": "integrations",
+          "title": "APIs",
+          "items": [
+            "REST APIs",
+            "Intégration frontend/backend",
+            "Validation de données",
+            "Services externes"
+          ]
+        },
+        {
+          "key": "databases",
+          "title": "Bases de données",
+          "items": [
+            "MySQL",
+            "SQLite",
+            "Modélisation relationnelle",
+            "Persistance des données"
+          ]
+        },
+        {
+          "key": "tools",
+          "title": "Workflow",
+          "items": [
+            "Kanban",
+            "DevOps",
+            "GitHub",
+            "Bitbucket",
+            "Travail collaboratif"
+          ]
+        }
+      ]
+    },
+    "experience": {
+      "eyebrow": "Expérience / CV",
+      "title": "Parcours technique entre frontend, full-stack, systèmes métier et formation en Ingénierie Logicielle.",
+      "description": "Expérience professionnelle et académique orientée vers les applications web, les intégrations, les bases de données et les logiciels en production.",
+      "items": [
+        {
+          "period": "Mars 2024",
+          "role": "Développeuse Fullstack",
+          "company": "Plateforme web privée",
+          "type": "Full-stack",
+          "description": "Développement full-stack sur une plateforme web, avec collaboration dans l'implémentation de fonctionnalités et l'intégration entre logique frontend et backend."
+        },
+        {
+          "period": "Mars 2021 - Septembre 2021",
+          "role": "Développeuse FrontEnd",
+          "company": "Entreprise privée d'assurances",
+          "type": "Frontend",
+          "description": "Développement frontend pour une entreprise d'assurances, avec un focus sur les interfaces web, la structure visuelle et l'expérience digitale."
+        }
+      ],
+      "educationTitle": "Formation",
+      "educationItems": [
+        {
+          "period": "2023 - 2025",
+          "title": "Licence en Ingénierie Logicielle",
+          "institution": "Ingénierie Logicielle"
+        },
+        {
+          "period": "2024",
+          "title": "CET Réseaux et Systèmes Informatiques",
+          "institution": "IEFP"
+        }
+      ],
+      "languagesTitle": "Langues",
+      "languagesItems": [
+        {
+          "language": "Portugais",
+          "level": "Natif"
+        },
+        {
+          "language": "Anglais",
+          "level": "B2"
+        },
+        {
+          "language": "Français",
+          "level": "B1"
+        }
+      ]
+    },
+    "coverLetter": {
+      "eyebrow": "Lettre de présentation",
+      "title": "Une présentation technique pour équipes et projets logiciels.",
+      "description": "Texte de base aligné avec une expérience pratique en développement web, intégrations, données et systèmes métier.",
+      "paragraphs": [
+        "Je suis Tânia Oliveira, étudiante en dernière phase d'Ingénierie Logicielle avec de l'expérience en développement frontend, backend, applications web, plateformes SaaS, APIs et intégrations d'entreprise.",
+        "J'ai travaillé sur des sites corporate, plateformes opérationnelles, connecteurs ERP/CRM, synchronisation avec marketplaces et workflows de préparation de données CRM, toujours avec attention à la confidentialité du contexte métier.",
+        "Mon approche est technique, organisée et orientée production : code structuré, validation de données, logs, collaboration avec GitHub/Bitbucket et attention à la maintenance future."
+      ]
+    },
+    "contact": {
+      "eyebrow": "Contact",
+      "title": "Contact",
+      "description": "Pour des opportunités professionnelles, une collaboration technique ou des projets logiciels, vous pouvez me contacter directement via les canaux ci-dessous.",
+      "email": "taniaelizaoliveira@gmail.com"
+    },
+    "social": {
+      "github": "https://github.com/TaniaElizaOliveira",
+      "linkedin": "https://www.linkedin.com/in/oliveira-tania/",
+      "links": [
+        {
+          "label": "GitHub",
+          "href": "https://github.com/TaniaElizaOliveira"
+        },
+        {
+          "label": "LinkedIn",
+          "href": "https://www.linkedin.com/in/oliveira-tania/"
+        }
+      ]
+    },
+    "footer": {
+      "brand": "Tânia Oliveira",
+      "description": "Portfolio d'ingénierie logicielle pour applications web, SaaS, APIs et intégrations métier.",
+      "prompt": "portfolio.status()",
+      "role": "Finaliste en Ingénierie Logicielle",
+      "location": "Portugal",
+      "focus": "Frontend · .NET · Applications Web · Intégrations ERP",
+      "mindset": "Toujours apprendre, construire et améliorer",
+      "availability": "Ouverte aux opportunités",
+      "linksLabel": "Navigation",
+      "socialLabel": "Profils",
+      "builtLine": "Construit avec attention à l'ingénierie, à la clarté et aux systèmes orientés production.",
+      "links": [
+        {
+          "label": "À propos",
+          "href": "/about"
+        },
+        {
+          "label": "Projets",
+          "href": "/under-construction"
+        },
+        {
+          "label": "Réalisations",
+          "href": "/under-construction"
+        },
+        {
+          "label": "Contact",
+          "href": "/under-construction"
+        }
+      ],
+      "languageLabel": "Sélectionner la langue",
+      "languages": [
+        {
+          "code": "pt",
+          "label": "PT"
+        },
+        {
+          "code": "en",
+          "label": "EN"
+        },
+        {
+          "code": "es",
+          "label": "ES"
+        },
+        {
+          "code": "fr",
+          "label": "FR"
+        }
+      ],
+      "copyright": "© 2026 Tânia Oliveira. Tous droits réservés."
+    },
+    "achievements": {
+      "eyebrow": "Réalisations",
+      "title": "Réalisations",
+      "description": "Étapes sélectionnées de mon parcours académique et technique, avec un focus sur le développement logiciel, les systèmes métier et les solutions digitales.",
+      "items": [
+        "Étudiante en dernière phase d'Ingénierie Logicielle",
+        "Développement d'applications web responsives",
+        "Expérience pratique en frontend et backend",
+        "Intégrations d'APIs et de systèmes métier",
+        "Préparation, nettoyage et validation de données CRM",
+        "Expérience avec des solutions SaaS et architectures multi-tenant",
+        "Travail avec ERP, CRM, marketplaces et bases de données"
+      ],
+      "placeholder": "Zone réservée à une future expérience interactive de terminal technique."
+    }
+  }
+}

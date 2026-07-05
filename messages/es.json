@@ -19,7 +19,7 @@
     "navigation": {
       "brand": "Tânia Oliveira",
       "initials": "TO",
-      "role": "Software Engineering / Web Applications",
+      "role": "Ingeniería de Software / Aplicaciones Web",
       "aria": "Navegación principal",
       "homeAria": "Ir a la página de inicio",
       "skip": "Saltar al contenido",
@@ -33,7 +33,7 @@
         },
         {
           "label": "Sobre mí",
-          "href": "/under-construction"
+          "href": "/about"
         },
         {
           "label": "Logros",
@@ -60,18 +60,22 @@
         {
           "code": "es",
           "label": "ES"
+        },
+        {
+          "code": "fr",
+          "label": "FR"
         }
       ]
     },
     "cv": {
       "label": "Descargar CV",
-      "href": "/TODO_CV_FILE.pdf"
+      "href": "/cv/Tania_Oliveira_CV_ES.pdf"
     },
     "hero": {
       "eyebrow": "Tânia Oliveira / Portafolio de Ingeniería de Software",
       "title": {
-        "first": "SOFTWARE",
-        "highlight": "ENGINEER"
+        "first": "INGENIERÍA",
+        "highlight": "SOFTWARE"
       },
       "description": "Ingeniería de software aplicada a productos web, integraciones empresariales y sistemas orientados a producción.",
       "portraitAlt": "Retrato en blanco y negro de Tânia Oliveira",
@@ -104,14 +108,14 @@
       "button": "Volver al inicio"
     },
     "educationRunner": {
-      "eyebrow": "FORMACIÓN",
+      "eyebrow": "EDUCACIÓN",
       "title": "Recorrido en movimiento",
-      "description": "Salta los obstáculos y desbloquea las formaciones que forman parte de mi recorrido.",
+      "description": "Salta los obstáculos y desbloquea las etapas de formación que dieron forma a mi recorrido.",
       "trackLabel": "Formación y cursos",
-      "progressLabel": "En evolución",
-      "instructionLabel": "Clic para saltar",
-      "unlockedLabel": "Curso desbloqueado",
-      "actionLabel": "Saltar obstáculo y desbloquear el próximo curso",
+      "progressLabel": "Recorrido en progreso",
+      "instructionLabel": "Haz clic para saltar",
+      "unlockedLabel": "Desbloqueado",
+      "actionLabel": "Salta el obstáculo y desbloquea la próxima formación",
       "completeLabel": "Recorrido desbloqueado",
       "nextGoal": {
         "eyebrow": "No termina aquí",
@@ -164,23 +168,100 @@
     },
     "about": {
       "eyebrow": "Sobre mí",
-      "title": "Perfil junior de ingeniería de software enfocado en desarrollo web e integraciones.",
-      "description": "Estudiante finalista de Ingeniería de Software con foco en aplicaciones web, backend, APIs, datos y prácticas de desarrollo seguro.",
-      "statement": "Soy Tânia Oliveira, estudiante finalista de Ingeniería de Software y developer junior con experiencia práctica en la creación de aplicaciones web, interfaces responsivas, integraciones con APIs, preparación de datos y soluciones conectadas a sistemas empresariales. Tengo especial interés por el desarrollo web, la programación asistida por IA, el backend, la integración de APIs y las prácticas de desarrollo seguro, siempre con foco en estructura, usabilidad y calidad técnica.",
+      "title": "INGENIERÍA DE SOFTWARE, FRONTEND E INTEGRACIONES PARA PROBLEMAS REALES.",
+      "description": "Soy Tânia Oliveira, estudiante finalista de Ingeniería de Software y developer junior con experiencia práctica en proyectos web, interfaces responsivas, integración de APIs, Sage 50c, e-commerce, backoffice y aplicaciones internas.",
+      "introLabel": "Quién soy",
+      "introParagraphs": [
+        "Soy developer en inicio de carrera, pero con experiencia práctica en entorno empresarial. Trabajo sobre todo con desarrollo web, interfaces responsivas, integración de APIs, organización de datos y soluciones conectadas a sistemas empresariales.",
+        "En los últimos proyectos, he trabajado con React, Vite, JavaScript, TypeScript, C#/.NET, Sage 50c, WooCommerce, MongoDB, Render y Vercel. Me gusta transformar requisitos confusos en interfaces claras, flujos funcionales y soluciones que ayudan a los equipos en el día a día."
+      ],
       "principles": [
         {
           "title": "Ingeniería",
-          "text": "Base académica en Ingeniería de Software aplicada al análisis, implementación, integración y evolución de sistemas."
+          "text": "Base en Ingeniería de Software, redes, programación, bases de datos, APIs y desarrollo seguro."
         },
         {
           "title": "Web",
-          "text": "Experiencia práctica en interfaces, aplicaciones web, PWAs, dashboards, sitios web empresariales y arquitecturas frontend modernas."
+          "text": "Creación de interfaces responsivas con React, Vite, JavaScript, HTML, CSS e integración con servicios externos."
         },
         {
           "title": "Integración",
-          "text": "Interés y práctica con APIs, bases de datos, integraciones ERP/CRM, validaciones, trazabilidad y flujos orientados a producción."
+          "text": "Experiencia práctica con APIs, Sage 50c, WooCommerce, CRM, sincronización de datos y flujos empresariales."
         }
-      ]
+      ],
+      "built": {
+        "eyebrow": "Proyectos prácticos",
+        "title": "LO QUE HE CONSTRUIDO",
+        "items": [
+          {
+            "title": "Sage 50c + integraciones",
+            "text": "Trabajo en flujos de integración entre Sage 50c, CRM, WooCommerce y aplicaciones web, con foco en sincronización de clientes, productos, stock, documentos y datos comerciales."
+          },
+          {
+            "title": "Aplicaciones web",
+            "text": "Desarrollo de páginas y aplicaciones con React/Vite, componentes reutilizables, layouts responsivos y deploy en entornos como Vercel y Render."
+          },
+          {
+            "title": "Backoffice y operaciones",
+            "text": "Participación en plataformas internas con backoffice, PWA operacional, autenticación, APIs, gestión de tareas, datos y preparación para producción."
+          },
+          {
+            "title": "Comunicación técnica",
+            "text": "Creación de documentación, análisis de errores, validación de builds, pruebas, tickets y explicación técnica para clientes y equipos."
+          }
+        ]
+      },
+      "stack": {
+        "eyebrow": "Herramientas",
+        "title": "STACK ACTUAL",
+        "groups": [
+          {
+            "title": "Frontend",
+            "items": ["React", "Vite", "JavaScript", "TypeScript", "HTML", "CSS", "Bootstrap"]
+          },
+          {
+            "title": "Integraciones",
+            "items": ["REST APIs", "Sage 50c", "WooCommerce", "CRM", "Postman"]
+          },
+          {
+            "title": "Backend / Datos",
+            "items": ["Node.js", "C#/.NET", "PHP", "Laravel", "MongoDB", "MySQL"]
+          },
+          {
+            "title": "Deploy / Workflow",
+            "items": ["GitHub", "Render", "Vercel", "Kanban", "documentación técnica"]
+          }
+        ]
+      },
+      "workflow": {
+        "eyebrow": "Proceso",
+        "title": "CÓMO TRABAJO",
+        "items": [
+          "Primero entiendo el problema de negocio antes de pensar en la interfaz.",
+          "Procuro construir layouts responsivos, claros y sin complejidad innecesaria.",
+          "Valido integraciones con APIs, datos reales y flujos completos.",
+          "Documento decisiones, errores y pasos técnicos para facilitar el mantenimiento."
+        ]
+      },
+      "growth": {
+        "eyebrow": "En evolución continua",
+        "title": "EN EVOLUCIÓN CONTINUA",
+        "text": "Estoy consolidando mi experiencia en Ingeniería de Software, con foco en frontend moderno, arquitectura de aplicaciones web, APIs, backend e integración de sistemas empresariales. Mi objetivo es crecer como developer capaz de crear soluciones completas, usables y bien estructuradas.",
+        "badges": [
+          "Frontend Engineering",
+          "API Integration",
+          "Backend Foundations",
+          "AI-assisted Development",
+          "Secure Development"
+        ]
+      },
+      "cta": {
+        "title": "¿QUIERES VER LO QUE HE CONSTRUIDO?",
+        "text": "Conoce los proyectos, experiencias y soluciones que forman parte de mi recorrido.",
+        "projects": "Ver proyectos",
+        "contact": "Contactar",
+        "cv": "Descargar CV técnico"
+      }
     },
     "projects": {
       "eyebrow": "Proyectos",
@@ -361,7 +442,7 @@
       "links": [
         {
           "label": "Sobre mí",
-          "href": "/under-construction"
+          "href": "/about"
         },
         {
           "label": "Proyectos",
@@ -389,6 +470,10 @@
         {
           "code": "es",
           "label": "ES"
+        },
+        {
+          "code": "fr",
+          "label": "FR"
         }
       ],
       "copyright": "© 2026 Tânia Oliveira. Todos los derechos reservados."

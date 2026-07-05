@@ -132,8 +132,9 @@ export function Terminal({
     const command = safeCommands[currentCommandIndex];
 
     if (!command) {
-      setIsComplete(true);
-      return;
+      const timeout = window.setTimeout(() => setIsComplete(true), 0);
+
+      return () => window.clearTimeout(timeout);
     }
 
     if (typedCommand.length < command.length) {

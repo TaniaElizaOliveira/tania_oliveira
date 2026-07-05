@@ -333,8 +333,13 @@ export function BinaryPortrait({
     }
 
     if (!animated) {
-      renderPortrait(1);
-      return;
+      animationRef.current = requestAnimationFrame(() => renderPortrait(1));
+
+      return () => {
+        if (animationRef.current) {
+          cancelAnimationFrame(animationRef.current);
+        }
+      };
     }
 
     const startedAt = performance.now();

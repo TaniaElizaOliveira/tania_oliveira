@@ -47,6 +47,10 @@ const labels = {
     reveal: "Revelar identidad visual",
     enter: "Entrar al portafolio",
   },
+  fr: {
+    reveal: "Révéler l'identité visuelle",
+    enter: "Entrer dans le portfolio",
+  },
 } as const;
 
 const name = "TANIA OLIVEIRA";

@@ -328,5 +328,7 @@ const saasCaseStudyContent = {
 } as const;
 
 export function getSaasCaseStudyContent(locale: Locale) {
-  return saasCaseStudyContent[locale] ?? saasCaseStudyContent.pt;
+  const contentLocale = locale === "fr" ? "en" : locale;
+
+  return saasCaseStudyContent[contentLocale] ?? saasCaseStudyContent.pt;
 }

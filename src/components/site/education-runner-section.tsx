@@ -47,6 +47,32 @@ export function EducationRunnerSection({
   );
   const xpValue = currentIndex * 125;
   const activeMilestoneLabel = milestoneLabels[currentIndex] ?? obstacleNumber;
+  const isPortuguese = content.eyebrow === "EDUCAÇÃO";
+  const isFrench = content.eyebrow === "FORMATION";
+  const isSpanish = content.eyebrow === "EDUCACIÓN";
+  const hudLabels = isFrench
+    ? {
+        level: "NIVEAU",
+        unlocked: "DÉBLOQUÉ",
+        xp: "XP DE FORMATION",
+      }
+    : isSpanish
+      ? {
+          level: "NIVEL",
+          unlocked: "DESBLOQUEADO",
+          xp: "XP DE EDUCACIÓN",
+        }
+      : isPortuguese
+        ? {
+            level: "NÍVEL",
+            unlocked: "DESBLOQUEADO",
+            xp: "XP DE EDUCAÇÃO",
+          }
+      : {
+          level: "LEVEL",
+          unlocked: "UNLOCKED",
+          xp: "EDUCATION XP",
+        };
 
   const revealCurrentCourse = () => {
     const course = content.items[currentIndex];
@@ -123,15 +149,15 @@ export function EducationRunnerSection({
 
           <span className={styles.hud} aria-hidden="true">
             <span className={styles.hudItem}>
-              <span>EDUCATION XP</span>
+              <span>{hudLabels.xp}</span>
               <strong>{xpValue}</strong>
             </span>
             <span className={styles.hudItem}>
-              <span>LEVEL</span>
+              <span>{hudLabels.level}</span>
               <strong>{levelNumber}</strong>
             </span>
             <span className={styles.hudItem}>
-              <span>UNLOCKED</span>
+              <span>{hudLabels.unlocked}</span>
               <strong>
                 {currentIndex} / {total}
               </strong>
@@ -210,7 +236,7 @@ export function EducationRunnerSection({
               className={styles.unlockToast}
               key={latestUnlockedCourse.title}
             >
-              <span>UNLOCKED</span>
+              <span>{hudLabels.unlocked}</span>
               <strong>{latestUnlockedCourse.title}</strong>
               <small>{latestUnlockedCourse.status}</small>
             </span>

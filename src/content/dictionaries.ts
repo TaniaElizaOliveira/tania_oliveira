@@ -1,12 +1,14 @@
 import type { Locale } from "@/i18n/routing";
 import en from "../../messages/en.json";
 import es from "../../messages/es.json";
+import fr from "../../messages/fr.json";
 import pt from "../../messages/pt.json";
 
 const dictionaries: Record<Locale, typeof pt> = {
   pt,
   en,
   es,
+  fr,
 };
 
 export type SiteDictionary = typeof pt;

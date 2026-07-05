@@ -28,6 +28,7 @@ function randomBetween(min: number, max: number) {
 export function MouseParticleField() {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const frameRef = useRef<number | null>(null);
+  const isDrawingRef = useRef(false);
   const particlesRef = useRef<Particle[]>([]);
   const pointerRef = useRef({
     lastX: 0,
@@ -60,68 +61,17 @@ export function MouseParticleField() {
       context.setTransform(dpr, 0, 0, dpr, 0, 0);
     };
 
-    const emitParticles = (x: number, y: number, amount: number, force: number) => {
-      const particles = particlesRef.current;
-      const maxParticles = window.innerWidth < 768 ? 54 : 120;
-
-      for (let index = 0; index < amount; index += 1) {
-        const angle = Math.random() * Math.PI * 2;
-        const speed = randomBetween(0.08, 0.72) * force;
-        const color = colors[(particles.length + index) % colors.length];
-
-        particles.push({
-          alpha: randomBetween(0.18, 0.62),
-          color,
-          life: 0,
-          maxLife: randomBetween(72, 132),
-          radius: randomBetween(0.6, window.innerWidth < 768 ? 1.5 : 2.2),
-          vx:
-            Math.cos(angle) * speed +
-            pointerRef.current.vx * randomBetween(0.006, 0.014),
-          vy:
-            Math.sin(angle) * speed +
-            pointerRef.current.vy * randomBetween(0.006, 0.014),
-          x: x + Math.cos(angle) * randomBetween(4, 22),
-          y: y + Math.sin(angle) * randomBetween(4, 22),
-        });
-      }
-
-      if (particles.length > maxParticles) {
-        particles.splice(0, particles.length - maxParticles);
-      }
-    };
-
-    const onPointerMove = (event: PointerEvent) => {
-      if (event.pointerType !== "mouse") {
-        return;
-      }
-
-      const pointer = pointerRef.current;
-      const x = event.clientX;
-      const y = event.clientY;
-      const dx = pointer.ready ? x - pointer.lastX : 0;
-      const dy = pointer.ready ? y - pointer.lastY : 0;
-      const distance = Math.hypot(dx, dy);
-
-      pointer.ready = true;
-      pointer.vx = pointer.vx * 0.82 + dx * 0.18;
-      pointer.vy = pointer.vy * 0.82 + dy * 0.18;
-      pointer.lastX = x;
-      pointer.lastY = y;
-
-      if (distance > 3) {
-        emitParticles(x, y, distance > 18 ? 3 : 2, Math.min(1.25, 0.6 + distance / 80));
-      }
-    };
-
-    const onPointerLeave = () => {
-      pointerRef.current.ready = false;
-    };
-
     const draw = () => {
       const particles = particlesRef.current;
 
       context.clearRect(0, 0, window.innerWidth, window.innerHeight);
+
+      if (particles.length === 0) {
+        isDrawingRef.current = false;
+        frameRef.current = null;
+        return;
+      }
+
       context.globalCompositeOperation = "lighter";
 
       for (let index = particles.length - 1; index >= 0; index -= 1) {
@@ -168,11 +118,79 @@ export function MouseParticleField() {
       frameRef.current = window.requestAnimationFrame(draw);
     };
 
+    const startDrawing = () => {
+      if (isDrawingRef.current) {
+        return;
+      }
+
+      isDrawingRef.current = true;
+      frameRef.current = window.requestAnimationFrame(draw);
+    };
+
+    const emitParticles = (x: number, y: number, amount: number, force: number) => {
+      const particles = particlesRef.current;
+      const maxParticles = window.innerWidth < 768 ? 54 : 120;
+
+      for (let index = 0; index < amount; index += 1) {
+        const angle = Math.random() * Math.PI * 2;
+        const speed = randomBetween(0.08, 0.72) * force;
+        const color = colors[(particles.length + index) % colors.length];
+
+        particles.push({
+          alpha: randomBetween(0.18, 0.62),
+          color,
+          life: 0,
+          maxLife: randomBetween(72, 132),
+          radius: randomBetween(0.6, window.innerWidth < 768 ? 1.5 : 2.2),
+          vx:
+            Math.cos(angle) * speed +
+            pointerRef.current.vx * randomBetween(0.006, 0.014),
+          vy:
+            Math.sin(angle) * speed +
+            pointerRef.current.vy * randomBetween(0.006, 0.014),
+          x: x + Math.cos(angle) * randomBetween(4, 22),
+          y: y + Math.sin(angle) * randomBetween(4, 22),
+        });
+      }
+
+      if (particles.length > maxParticles) {
+        particles.splice(0, particles.length - maxParticles);
+      }
+
+      startDrawing();
+    };
+
+    const onPointerMove = (event: PointerEvent) => {
+      if (event.pointerType !== "mouse") {
+        return;
+      }
+
+      const pointer = pointerRef.current;
+      const x = event.clientX;
+      const y = event.clientY;
+      const dx = pointer.ready ? x - pointer.lastX : 0;
+      const dy = pointer.ready ? y - pointer.lastY : 0;
+      const distance = Math.hypot(dx, dy);
+
+      pointer.ready = true;
+      pointer.vx = pointer.vx * 0.82 + dx * 0.18;
+      pointer.vy = pointer.vy * 0.82 + dy * 0.18;
+      pointer.lastX = x;
+      pointer.lastY = y;
+
+      if (distance > 3) {
+        emitParticles(x, y, distance > 18 ? 3 : 2, Math.min(1.25, 0.6 + distance / 80));
+      }
+    };
+
+    const onPointerLeave = () => {
+      pointerRef.current.ready = false;
+    };
+
     resize();
     window.addEventListener("resize", resize);
     window.addEventListener("pointermove", onPointerMove, { passive: true });
     window.addEventListener("pointerleave", onPointerLeave);
-    frameRef.current = window.requestAnimationFrame(draw);
 
     return () => {
       if (frameRef.current) {

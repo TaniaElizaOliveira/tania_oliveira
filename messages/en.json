@@ -33,7 +33,7 @@
         },
         {
           "label": "About Me",
-          "href": "/under-construction"
+          "href": "/about"
         },
         {
           "label": "Achievements",
@@ -60,12 +60,16 @@
         {
           "code": "es",
           "label": "ES"
+        },
+        {
+          "code": "fr",
+          "label": "FR"
         }
       ]
     },
     "cv": {
       "label": "Download CV",
-      "href": "/TODO_CV_FILE.pdf"
+      "href": "/cv/Tania_Oliveira_CV_EN.pdf"
     },
     "hero": {
       "eyebrow": "Tânia Oliveira / Software Engineering Portfolio",
@@ -164,23 +168,100 @@
     },
     "about": {
       "eyebrow": "About Me",
-      "title": "Junior software engineering profile focused on web development and integrations.",
-      "description": "Final-year Software Engineering student focused on web applications, backend, APIs, data and secure development practices.",
-      "statement": "I am Tânia Oliveira, a final-year Software Engineering student and junior developer with hands-on experience building web applications, responsive interfaces, API integrations, data preparation workflows and solutions connected to business systems. I am especially interested in web development, AI-assisted programming, backend/API integration and secure development practices, with a strong focus on structure, usability and technical quality.",
+      "title": "SOFTWARE ENGINEERING, FRONTEND AND INTEGRATIONS FOR REAL PROBLEMS.",
+      "description": "I am Tânia Oliveira, a final-year Software Engineering student and junior developer with practical experience in web projects, responsive interfaces, API integration, Sage 50c, e-commerce, backoffice and internal applications.",
+      "introLabel": "Who I am",
+      "introParagraphs": [
+        "I am an early-career developer with practical experience in business environments. I mainly work with web development, responsive interfaces, API integration, data organization and solutions connected to business systems.",
+        "In recent projects, I have worked with React, Vite, JavaScript, TypeScript, C#/.NET, Sage 50c, WooCommerce, MongoDB, Render and Vercel. I like turning unclear requirements into clear interfaces, functional flows and solutions that help teams in their daily work."
+      ],
       "principles": [
         {
           "title": "Engineering",
-          "text": "Academic foundation in Software Engineering applied to analysis, implementation, integration and system evolution."
+          "text": "Foundation in Software Engineering, networks, programming, databases, APIs and secure development."
         },
         {
           "title": "Web",
-          "text": "Hands-on experience with interfaces, web applications, PWAs, dashboards, business websites and modern frontend architecture."
+          "text": "Responsive interface development with React, Vite, JavaScript, HTML, CSS and integration with external services."
         },
         {
           "title": "Integration",
-          "text": "Interest and practical work with APIs, databases, ERP/CRM integrations, validation, traceability and production-oriented flows."
+          "text": "Practical experience with APIs, Sage 50c, WooCommerce, CRM, data synchronization and business workflows."
         }
-      ]
+      ],
+      "built": {
+        "eyebrow": "Practical projects",
+        "title": "WHAT I HAVE BEEN BUILDING",
+        "items": [
+          {
+            "title": "Sage 50c + integrations",
+            "text": "I work on integration flows between Sage 50c, CRM, WooCommerce and web applications, focused on synchronizing customers, products, stock, documents and commercial data."
+          },
+          {
+            "title": "Web applications",
+            "text": "Development of pages and applications with React/Vite, reusable components, responsive layouts and deployment on environments such as Vercel and Render."
+          },
+          {
+            "title": "Backoffice and operations",
+            "text": "Participation in internal platforms with backoffice, operational PWA, authentication, APIs, task management, data and preparation for production."
+          },
+          {
+            "title": "Technical communication",
+            "text": "Creation of documentation, error analysis, build validation, testing, tickets and technical explanations for clients and teams."
+          }
+        ]
+      },
+      "stack": {
+        "eyebrow": "Tools",
+        "title": "CURRENT STACK",
+        "groups": [
+          {
+            "title": "Frontend",
+            "items": ["React", "Vite", "JavaScript", "TypeScript", "HTML", "CSS", "Bootstrap"]
+          },
+          {
+            "title": "Integrations",
+            "items": ["REST APIs", "Sage 50c", "WooCommerce", "CRM", "Postman"]
+          },
+          {
+            "title": "Backend / Data",
+            "items": ["Node.js", "C#/.NET", "PHP", "Laravel", "MongoDB", "MySQL"]
+          },
+          {
+            "title": "Deploy / Workflow",
+            "items": ["GitHub", "Render", "Vercel", "Kanban", "technical documentation"]
+          }
+        ]
+      },
+      "workflow": {
+        "eyebrow": "Process",
+        "title": "HOW I WORK",
+        "items": [
+          "I first understand the business problem before thinking about the interface.",
+          "I aim to build responsive, clear layouts without unnecessary complexity.",
+          "I validate integrations with APIs, real data and complete flows.",
+          "I document decisions, errors and technical steps to make maintenance easier."
+        ]
+      },
+      "growth": {
+        "eyebrow": "Continuous evolution",
+        "title": "CONTINUOUS EVOLUTION",
+        "text": "I am consolidating my experience in Software Engineering, focused on modern frontend, web application architecture, APIs, backend and business system integration. My goal is to grow as a developer capable of creating complete, usable and well-structured solutions.",
+        "badges": [
+          "Frontend Engineering",
+          "API Integration",
+          "Backend Foundations",
+          "AI-assisted Development",
+          "Secure Development"
+        ]
+      },
+      "cta": {
+        "title": "WANT TO SEE WHAT I HAVE BUILT?",
+        "text": "Explore the projects, experiences and solutions that are part of my path.",
+        "projects": "View projects",
+        "contact": "Contact",
+        "cv": "Download technical CV"
+      }
     },
     "projects": {
       "eyebrow": "Projects",
@@ -361,7 +442,7 @@
       "links": [
         {
           "label": "About",
-          "href": "/under-construction"
+          "href": "/about"
         },
         {
           "label": "Projects",
@@ -389,6 +470,10 @@
         {
           "code": "es",
           "label": "ES"
+        },
+        {
+          "code": "fr",
+          "label": "FR"
         }
       ],
       "copyright": "© 2026 Tânia Oliveira. All rights reserved."
